@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
+
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
+
 import App, { Search, Button, Table } from './App';
 
 describe('App', () => {
@@ -24,7 +29,7 @@ describe('Search', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  test('has a valid snapshot', () => {
+  it('has a valid snapshot', () => {
     const component = renderer.create(<Search>Search</Search>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -38,11 +43,16 @@ describe('Button', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  test('has a valid snapshot', () => {
+  it('has a valid snapshot', () => {
     const component = renderer.create(<Button>Button</Button>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('displays the button text', () => {
+    const element = shallow(<Button>hello</Button>);
+    expect(element.props().children).toBe('hello');
+  })
 });
 
 describe('Table', () => {
@@ -59,9 +69,14 @@ describe('Table', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  test('has a valid snapshot', () => {
+  it('has a valid snapshot', () => {
     const component = renderer.create(<Table { ...props } />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it('shows two items in list', () => {
+    const element = shallow(<Table { ...props } />);
+    expect(element.find('.table-row').length).toBe(2);
+  })
 });
