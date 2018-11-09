@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 
 const DEFAULT_QUERY = 'redux';
@@ -53,9 +54,8 @@ class App extends Component {
   fetchSearchTopStories = (searchTerm, page = 0) => {
     const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}
       &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
-    fetch(url)
-      .then(res => res.json())
-      .then(result => this.setSearchTopStores(result))
+    axios(url)
+      .then(result => this.setSearchTopStores(result.data))
       .catch(error => this.setState({ error }))
   }
 
