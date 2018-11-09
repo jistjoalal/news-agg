@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 const DEFAULT_QUERY = 'redux';
-const DEFAULT_HPP = '100';
+const DEFAULT_HPP = '10';
 
 const PATH_BASE = 'https://hn.algolia.com/api/v1';
 const PATH_SEARCH = '/search';
@@ -14,8 +14,11 @@ class App extends Component {
   state = {
     results: null,
     searchKey: '',
-    searchTerm: DEFAULT_QUERY
+    searchTerm: DEFAULT_QUERY,
+    error: null
   };
+
+  needsToSearchTopStories = searchTerm => !this.state.results[searchTerm];
   
   setSearchTopStores = result => {
     const { hits, page } = result;
@@ -40,7 +43,10 @@ class App extends Component {
   onSearchSubmit = e => {
     const { searchTerm } = this.state;
     this.setState({ searchKey: searchTerm });
-    this.fetchSearchTopStories(searchTerm);
+
+    if (this.needsToSearchTopStories(searchTerm)) {
+      this.fetchSearchTopStories(searchTerm);
+    }
     e.preventDefault();
   }
 
@@ -50,7 +56,7 @@ class App extends Component {
     fetch(url)
       .then(res => res.json())
       .then(result => this.setSearchTopStores(result))
-      .catch(error => error)
+      .catch(error => this.setState({ error }))
   }
 
   onDismiss = id => {
@@ -72,7 +78,7 @@ class App extends Component {
   }
   
   render() {
-    const { searchTerm, results, searchKey }  = this.state;
+    const { searchTerm, results, searchKey, error }  = this.state;
     const page = (results && results[searchKey]
       && results[searchKey].page) || 0;
     const list = (results && results[searchKey]
@@ -88,10 +94,16 @@ class App extends Component {
           >
             Search:
           </Search>
-          <Table
-            list={list}
-            onDismiss={this.onDismiss}
-          />
+          { error ?
+            <div className="interactions">
+              <p>Something went wrong.</p>
+            </div>
+            
+            : <Table
+              list={list}
+              onDismiss={this.onDismiss}
+            />
+          }
         </div>
         <div className="interactions">
           <Button onClick={() =>
