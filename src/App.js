@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { sortBy } from 'lodash';
+import classNames from 'classnames';
 import './App.css';
 
 const DEFAULT_QUERY = 'redux';
@@ -11,6 +13,14 @@ const PARAM_SEARCH = 'query=';
 const PARAM_PAGE = 'page=';
 const PARAM_HPP = 'hitsPerPage=';
 
+const SORTS = {
+  NONE: list => list,
+  TITLE: list => sortBy(list, 'title'),
+  AUTHOR: list => sortBy(list, 'author'),
+  COMMENTS: list => sortBy(list, 'num_comments').reverse(),
+  POINTS: list => sortBy(list, 'points').reverse(),
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +30,17 @@ class App extends Component {
       searchTerm: DEFAULT_QUERY,
       error: null,
       isLoading: false,
+      sortKey: 'NONE',
+      isSortReverse: false,
     };
+
+    this.needsToSearchTopStories = this.needsToSearchTopStories.bind(this);
+    this.setSearchTopStores = this.setSearchTopStores.bind(this);
+    this.fetchSearchTopStories = this.fetchSearchTopStories.bind(this);
+    this.onSearchChange = this.onSearchChange.bind(this);
+    this.onSearchSubmit = this.onSearchSubmit.bind(this);
+    this.onDismiss = this.onDismiss.bind(this);
+    this.onSort = this.onSort.bind(this);
   }
   
   componentDidMount() {
@@ -30,7 +50,8 @@ class App extends Component {
   }
   
   render() {
-    const { searchTerm, results, searchKey, error, isLoading }  = this.state;
+    const { searchTerm, results, searchKey, error, isLoading,
+      sortKey, isSortReverse }  = this.state;
     const page = (results && results[searchKey]
       && results[searchKey].page) || 0;
     const list = (results && results[searchKey]
@@ -47,9 +68,12 @@ class App extends Component {
             Search
           </Search>
           <TableWithError
-            error={error}
             list={list}
             onDismiss={this.onDismiss}
+            sortKey={sortKey}
+            onSort={this.onSort}
+            isSortReverse={isSortReverse}
+            error={error}
           />
         </div>
         <div className="interactions">
@@ -62,6 +86,13 @@ class App extends Component {
         </div>
       </div>
     );
+  }
+
+  onSort(sortKey) {
+    const { isSortReverse } = this.state;
+    // toggle if reverse sort if already clicked
+    const newISR = this.state.sortKey === sortKey && !isSortReverse;
+    this.setState({ sortKey, isSortReverse: newISR });
   }
   
   // control search input
@@ -150,36 +181,94 @@ class Search extends Component {
 }
 
 // table formatted for results from HN API
-const Table = ({ list, onDismiss }) => 
-  <div className="table">
-    {list.map(item => {
-      const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
-      return (
-        <div key={item.objectID} className="table-row">
-          <span style={lg}>
-            <a href={item.url}>{item.title}</a>
-          </span>
-          <span style={md}>
-            {item.author}
-          </span>
-          <span style={sm}>
-            {item.num_comments}
-          </span>
-          <span style={sm}>
-            {item.points}
-          </span>
-          <span style={sm}>
-            <Button
-              onClick={() => onDismiss(item.objectID)}
-              className="button-inline"
-            >
-              Dismiss
-            </Button>
-          </span>
-        </div>
-      );
-    })}
-  </div>
+const Table = ({
+  list, onDismiss, sortKey = 'NONE', onSort, isSortReverse
+}) => {
+  const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
+  const sortedList = SORTS[sortKey](list);
+  const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
+  return (
+    <div className="table">
+      <div className="table-header">
+        <span style={lg}>
+          <Sort sortKey={'TITLE'} onSort={onSort} activeSortKey={sortKey}
+            isSortReverse={isSortReverse}
+          >
+            Title
+          </Sort>
+        </span>
+        <span style={md}>
+          <Sort sortKey={'AUTHOR'} onSort={onSort} activeSortKey={sortKey}
+            isSortReverse={isSortReverse}
+          >
+            Author
+          </Sort>
+        </span>
+        <span style={sm}>
+          <Sort sortKey={'COMMENTS'} onSort={onSort} activeSortKey={sortKey}
+            isSortReverse={isSortReverse}
+          >
+            Comments
+          </Sort>
+        </span>
+        <span style={sm}>
+          <Sort sortKey={'POINTS'} onSort={onSort} activeSortKey={sortKey}
+            isSortReverse={isSortReverse}
+          >
+            Points
+          </Sort>
+        </span>
+        <span style={sm}>
+          Archive
+        </span>
+      </div>
+      {toggleSortedList.map(item => {
+        return (
+          <div key={item.objectID} className="table-row">
+            <span style={lg}>
+              <a href={item.url}>{item.title}</a>
+            </span>
+            <span style={md}>
+              {item.author}
+            </span>
+            <span style={sm}>
+              {item.num_comments}
+            </span>
+            <span style={sm}>
+              {item.points}
+            </span>
+            <span style={sm}>
+              <Button
+                onClick={() => onDismiss(item.objectID)}
+                className="button-inline"
+              >
+                Dismiss
+              </Button>
+            </span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+const Sort = ({ sortKey, onSort, children, activeSortKey, isSortReverse }) => {
+  const active = sortKey === activeSortKey;
+  const direction = isSortReverse ? 'down' : 'up';
+  const sortClass = classNames('button-inline', { 'button-active': active });
+  return (
+    <span>
+      <Button onClick={() => onSort(sortKey)} className={sortClass}>
+        {children}
+      </Button>
+      <ArrowWithNull show={active} direction={direction} />
+    </span>
+  );
+}
+
+
+const Arrow = ({ direction }) =>
+  <i class={`fa fa-arrow-${direction}`}></i>
 
 // a button w/ a click listener
 const Button = ({ onClick, className = '', children }) => 
@@ -199,9 +288,15 @@ const withError = Component => ({ error, ...rest }) =>
     </div>
   : <Component { ...rest } />
 
+const withNull = Component => ({ show, ...rest }) =>
+  show ?
+    <Component { ...rest } />
+  : null;
+
 const ButtonWithLoading = withLoading(Button);
 const TableWithError = withError(Table);
+const ArrowWithNull = withNull(Arrow);
 
 export default App;
 
-export { Button, Search, Table };
+export { Button, Search, Table, SORTS };
