@@ -12,69 +12,20 @@ const PARAM_PAGE = 'page=';
 const PARAM_HPP = 'hitsPerPage=';
 
 class App extends Component {
-  state = {
-    results: null,
-    searchKey: '',
-    searchTerm: DEFAULT_QUERY,
-    error: null
-  };
-
-  needsToSearchTopStories = searchTerm => !this.state.results[searchTerm];
-  
-  setSearchTopStores = result => {
-    const { hits, page } = result;
-    const { searchKey, results } = this.state;
-    const oldHits = results && results[searchKey]
-      ? results[searchKey].hits : [];
-    const updatedHits = [...oldHits, ...hits];
-    this.setState({ 
-      results: { 
-        ...results,
-        [searchKey]: { hits: updatedHits, page }
-      }
-    });
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: null,
+      searchKey: '',
+      searchTerm: DEFAULT_QUERY,
+      error: null
+    };
   }
   
   componentDidMount() {
     const { searchTerm } = this.state;
     this.setState({ searchKey: searchTerm });
     this.fetchSearchTopStories(searchTerm);
-  }
-
-  onSearchSubmit = e => {
-    const { searchTerm } = this.state;
-    this.setState({ searchKey: searchTerm });
-
-    if (this.needsToSearchTopStories(searchTerm)) {
-      this.fetchSearchTopStories(searchTerm);
-    }
-    e.preventDefault();
-  }
-
-  fetchSearchTopStories = (searchTerm, page = 0) => {
-    const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}
-      &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
-    axios(url)
-      .then(result => this.setSearchTopStores(result.data))
-      .catch(error => this.setState({ error }))
-  }
-
-  onDismiss = id => {
-    const { searchKey, results } = this.state;
-    const { hits, page } = results[searchKey];
-
-    const isNotId = item => item.objectID !== id;
-    const updatedHits = hits.filter(isNotId);
-    this.setState({
-      results: {
-        ...results,
-        [searchKey]: { hits: updatedHits, page }
-      }
-    });
-  }
-  
-  onSearchChange = event => {
-    this.setState({ searchTerm: event.target.value });
   }
   
   render() {
@@ -92,7 +43,7 @@ class App extends Component {
             onChange={this.onSearchChange}
             onSubmit={this.onSearchSubmit}
           >
-            Search:
+            Search
           </Search>
           { error ?
             <div className="interactions">
@@ -115,8 +66,67 @@ class App extends Component {
       </div>
     );
   }
+  
+  // control search input
+  onSearchChange = event => {
+    this.setState({ searchTerm: event.target.value });
+  }
+
+  // submit search input
+  onSearchSubmit = e => {
+    const { searchTerm } = this.state;
+    this.setState({ searchKey: searchTerm });
+
+    if (this.needsToSearchTopStories(searchTerm)) {
+      this.fetchSearchTopStories(searchTerm);
+    }
+    e.preventDefault();
+  }
+
+  // remove hit from result list
+  onDismiss = id => {
+    const { searchKey, results } = this.state;
+    const { hits, page } = results[searchKey];
+
+    const isNotId = item => item.objectID !== id;
+    const updatedHits = hits.filter(isNotId);
+    this.setState({
+      results: {
+        ...results,
+        [searchKey]: { hits: updatedHits, page }
+      }
+    });
+  }
+
+  // is result for searchTerm cached already?
+  needsToSearchTopStories = searchTerm => !this.state.results[searchTerm];
+
+  // makes request to HN API
+  fetchSearchTopStories = (searchTerm, page = 0) => {
+    const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}
+      &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
+    axios(url)
+      .then(result => this.setSearchTopStores(result.data))
+      .catch(error => this.setState({ error }))
+  }
+  
+  // stores response in state.results, appending to existing hits
+  setSearchTopStores = response => {
+    const { hits, page } = response;
+    const { searchKey, results } = this.state;
+    const oldHits = results && results[searchKey]
+      ? results[searchKey].hits : [];
+    const updatedHits = [...oldHits, ...hits];
+    this.setState({ 
+      results: { 
+        ...results,
+        [searchKey]: { hits: updatedHits, page }
+      }
+    });
+  }
 }
 
+// a search bar
 const Search = ({ value, onChange, onSubmit, children }) =>
   <form onSubmit={onSubmit}>
     <input
@@ -129,7 +139,8 @@ const Search = ({ value, onChange, onSubmit, children }) =>
     </button>
   </form>
 
-const Table = ({ list, pattern, onDismiss }) => 
+// table formatted for results from HN API
+const Table = ({ list, onDismiss }) => 
   <div className="table">
     {list.map(item => {
       const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
@@ -160,6 +171,7 @@ const Table = ({ list, pattern, onDismiss }) =>
     })}
   </div>
 
+// a button w/ a click listener
 const Button = ({ onClick, className = '', children }) => 
     <button onClick={onClick} className={className}>
       {children}
