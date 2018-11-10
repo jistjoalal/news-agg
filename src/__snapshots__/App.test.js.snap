@@ -18,7 +18,7 @@ exports[`App has a valid snapshot 1`] = `
       <button
         type="submit"
       >
-        Search:
+        Search
       </button>
     </form>
     <div
@@ -28,12 +28,9 @@ exports[`App has a valid snapshot 1`] = `
   <div
     className="interactions"
   >
-    <button
-      className=""
-      onClick={[Function]}
-    >
-      More
-    </button>
+    <i
+      className="fa fa-spinner fa-spin fa-3x"
+    />
   </div>
 </div>
 `;
