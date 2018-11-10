@@ -150,14 +150,11 @@ exports[`Table has a valid snapshot 1`] = `
     >
       <span>
         <button
-          className="button-inline button-active"
+          className="button-inline"
           onClick={[Function]}
         >
           Title
         </button>
-        <i
-          class="fa fa-arrow-up"
-        />
       </span>
     </span>
     <span

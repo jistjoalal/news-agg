@@ -30,8 +30,6 @@ class App extends Component {
       searchTerm: DEFAULT_QUERY,
       error: null,
       isLoading: false,
-      sortKey: 'NONE',
-      isSortReverse: false,
     };
 
     this.needsToSearchTopStories = this.needsToSearchTopStories.bind(this);
@@ -40,7 +38,6 @@ class App extends Component {
     this.onSearchChange = this.onSearchChange.bind(this);
     this.onSearchSubmit = this.onSearchSubmit.bind(this);
     this.onDismiss = this.onDismiss.bind(this);
-    this.onSort = this.onSort.bind(this);
   }
   
   componentDidMount() {
@@ -51,7 +48,7 @@ class App extends Component {
   
   render() {
     const { searchTerm, results, searchKey, error, isLoading,
-      sortKey, isSortReverse }  = this.state;
+      isSortReverse }  = this.state;
     const page = (results && results[searchKey]
       && results[searchKey].page) || 0;
     const list = (results && results[searchKey]
@@ -70,8 +67,6 @@ class App extends Component {
           <TableWithError
             list={list}
             onDismiss={this.onDismiss}
-            sortKey={sortKey}
-            onSort={this.onSort}
             isSortReverse={isSortReverse}
             error={error}
           />
@@ -86,13 +81,6 @@ class App extends Component {
         </div>
       </div>
     );
-  }
-
-  onSort(sortKey) {
-    const { isSortReverse } = this.state;
-    // toggle if reverse sort if already clicked
-    const newISR = this.state.sortKey === sortKey && !isSortReverse;
-    this.setState({ sortKey, isSortReverse: newISR });
   }
   
   // control search input
@@ -181,75 +169,94 @@ class Search extends Component {
 }
 
 // table formatted for results from HN API
-const Table = ({
-  list, onDismiss, sortKey = 'NONE', onSort, isSortReverse
-}) => {
-  const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
-  const sortedList = SORTS[sortKey](list);
-  const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
-  return (
-    <div className="table">
-      <div className="table-header">
-        <span style={lg}>
-          <Sort sortKey={'TITLE'} onSort={onSort} activeSortKey={sortKey}
-            isSortReverse={isSortReverse}
-          >
-            Title
-          </Sort>
-        </span>
-        <span style={md}>
-          <Sort sortKey={'AUTHOR'} onSort={onSort} activeSortKey={sortKey}
-            isSortReverse={isSortReverse}
-          >
-            Author
-          </Sort>
-        </span>
-        <span style={sm}>
-          <Sort sortKey={'COMMENTS'} onSort={onSort} activeSortKey={sortKey}
-            isSortReverse={isSortReverse}
-          >
-            Comments
-          </Sort>
-        </span>
-        <span style={sm}>
-          <Sort sortKey={'POINTS'} onSort={onSort} activeSortKey={sortKey}
-            isSortReverse={isSortReverse}
-          >
-            Points
-          </Sort>
-        </span>
-        <span style={sm}>
-          Archive
-        </span>
+class Table extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sortKey: 'NONE',
+      isSortReverse: false,
+    };
+
+    this.onSort = this.onSort.bind(this);
+  }
+
+  onSort(sortKey) {
+    const { isSortReverse } = this.state;
+    // toggle if reverse sort if already clicked
+    const newISR = this.state.sortKey === sortKey && !isSortReverse;
+    this.setState({ sortKey, isSortReverse: newISR });
+  }
+
+  render() {
+    const { list, onDismiss } = this.props;
+    const { sortKey, isSortReverse } = this.state;
+    const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
+    const sortedList = SORTS[sortKey](list);
+    const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
+    return (
+      <div className="table">
+        <div className="table-header">
+          <span style={lg}>
+            <Sort sortKey={'TITLE'} onSort={this.onSort}
+              activeSortKey={sortKey} isSortReverse={isSortReverse}
+            >
+              Title
+            </Sort>
+          </span>
+          <span style={md}>
+            <Sort sortKey={'AUTHOR'} onSort={this.onSort}
+              activeSortKey={sortKey} isSortReverse={isSortReverse}
+            >
+              Author
+            </Sort>
+          </span>
+          <span style={sm}>
+            <Sort sortKey={'COMMENTS'} onSort={this.onSort}
+              activeSortKey={sortKey} isSortReverse={isSortReverse}
+            >
+              Comments
+            </Sort>
+          </span>
+          <span style={sm}>
+            <Sort sortKey={'POINTS'} onSort={this.onSort}
+              activeSortKey={sortKey} isSortReverse={isSortReverse}
+            >
+              Points
+            </Sort>
+          </span>
+          <span style={sm}>
+            Archive
+          </span>
+        </div>
+        {toggleSortedList.map(item => {
+          return (
+            <div key={item.objectID} className="table-row">
+              <span style={lg}>
+                <a href={item.url}>{item.title}</a>
+              </span>
+              <span style={md}>
+                {item.author}
+              </span>
+              <span style={sm}>
+                {item.num_comments}
+              </span>
+              <span style={sm}>
+                {item.points}
+              </span>
+              <span style={sm}>
+                <Button
+                  onClick={() => onDismiss(item.objectID)}
+                  className="button-inline"
+                >
+                  Dismiss
+                </Button>
+              </span>
+            </div>
+          );
+        })}
       </div>
-      {toggleSortedList.map(item => {
-        return (
-          <div key={item.objectID} className="table-row">
-            <span style={lg}>
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span style={md}>
-              {item.author}
-            </span>
-            <span style={sm}>
-              {item.num_comments}
-            </span>
-            <span style={sm}>
-              {item.points}
-            </span>
-            <span style={sm}>
-              <Button
-                onClick={() => onDismiss(item.objectID)}
-                className="button-inline"
-              >
-                Dismiss
-              </Button>
-            </span>
-          </div>
-        );
-      })}
-    </div>
-  );
+    );
+  }
 }
 
 const Sort = ({ sortKey, onSort, children, activeSortKey, isSortReverse }) => {
