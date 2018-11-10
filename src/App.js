@@ -33,7 +33,8 @@ class App extends Component {
     };
 
     this.needsToSearchTopStories = this.needsToSearchTopStories.bind(this);
-    this.setSearchTopStores = this.setSearchTopStores.bind(this);
+    this.setSearchTopStories = this.setSearchTopStories.bind(this);
+    this.updateSearchTopStories = this.updateSearchTopStories.bind(this);
     this.fetchSearchTopStories = this.fetchSearchTopStories.bind(this);
     this.onSearchChange = this.onSearchChange.bind(this);
     this.onSearchSubmit = this.onSearchSubmit.bind(this);
@@ -41,9 +42,10 @@ class App extends Component {
   }
   
   componentDidMount() {
-    const { searchTerm } = this.state;
-    this.setState({ searchKey: searchTerm });
-    this.fetchSearchTopStories(searchTerm);
+    this.setState(prevState => {
+      return { searchKey: prevState.searchTerm }
+    });
+    this.fetchSearchTopStories(this.state.searchTerm);
   }
   
   render() {
@@ -91,7 +93,9 @@ class App extends Component {
   // submit search input
   onSearchSubmit = e => {
     const { searchTerm } = this.state;
-    this.setState({ searchKey: searchTerm });
+    this.setState(prevState => {
+      return { searchKey: prevState.searchTerm }
+    });
 
     if (this.needsToSearchTopStories(searchTerm)) {
       this.fetchSearchTopStories(searchTerm);
@@ -101,16 +105,18 @@ class App extends Component {
 
   // remove hit from result list
   onDismiss = id => {
-    const { searchKey, results } = this.state;
-    const { hits, page } = results[searchKey];
-
-    const isNotId = item => item.objectID !== id;
-    const updatedHits = hits.filter(isNotId);
-    this.setState({
-      results: {
-        ...results,
-        [searchKey]: { hits: updatedHits, page }
-      }
+    this.setState(prevState => {
+      const { searchKey, results } = prevState;
+      const { hits, page } = results[searchKey];
+  
+      const isNotId = item => item.objectID !== id;
+      const updatedHits = hits.filter(isNotId);
+      return {
+        results: {
+          ...results,
+          [searchKey]: { hits: updatedHits, page }
+        }
+      };
     });
   }
 
@@ -124,24 +130,28 @@ class App extends Component {
     const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}
       &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
     axios(url)
-      .then(result => this.setSearchTopStores(result.data))
+      .then(result => this.setSearchTopStories(result.data))
       .catch(error => this.setState({ error, isLoading: false }))
   }
   
   // stores response in state.results, appending to existing hits
-  setSearchTopStores = response => {
+  setSearchTopStories = response => {
     const { hits, page } = response;
-    const { searchKey, results } = this.state;
+    this.setState(this.updateSearchTopStories(hits, page));
+  }
+
+  updateSearchTopStories = (hits, page) => prevState => {
+    const { searchKey, results } = prevState;
     const oldHits = results && results[searchKey]
       ? results[searchKey].hits : [];
     const updatedHits = [...oldHits, ...hits];
-    this.setState({ 
+    return { 
       results: { 
         ...results,
         [searchKey]: { hits: updatedHits, page }
       },
       isLoading: false
-    });
+    };
   }
 }
 
