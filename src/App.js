@@ -18,7 +18,8 @@ class App extends Component {
       results: null,
       searchKey: '',
       searchTerm: DEFAULT_QUERY,
-      error: null
+      error: null,
+      isLoading: false,
     };
   }
   
@@ -29,7 +30,7 @@ class App extends Component {
   }
   
   render() {
-    const { searchTerm, results, searchKey, error }  = this.state;
+    const { searchTerm, results, searchKey, error, isLoading }  = this.state;
     const page = (results && results[searchKey]
       && results[searchKey].page) || 0;
     const list = (results && results[searchKey]
@@ -57,11 +58,13 @@ class App extends Component {
           }
         </div>
         <div className="interactions">
-          <Button onClick={() =>
-            this.fetchSearchTopStories(searchKey, page + 1)}
-          >
+          {isLoading ?
+            <Loading />
+          : <Button onClick={() =>
+              this.fetchSearchTopStories(searchKey, page + 1)}>
             More
-          </Button>
+            </Button>
+          }
         </div>
       </div>
     );
@@ -103,6 +106,8 @@ class App extends Component {
 
   // makes request to HN API
   fetchSearchTopStories = (searchTerm, page = 0) => {
+    this.setState({ isLoading: true });
+
     const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}
       &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
     axios(url)
@@ -121,7 +126,8 @@ class App extends Component {
       results: { 
         ...results,
         [searchKey]: { hits: updatedHits, page }
-      }
+      },
+      isLoading: false
     });
   }
 }
@@ -186,6 +192,9 @@ const Button = ({ onClick, className = '', children }) =>
     <button onClick={onClick} className={className}>
       {children}
     </button>
+
+const Loading = () =>
+  <i class="fa fa-spinner fa-spin fa-3x"></i>;
 
 export default App;
 
