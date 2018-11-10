@@ -46,16 +46,11 @@ class App extends Component {
           >
             Search
           </Search>
-          { error ?
-            <div className="interactions">
-              <p>Something went wrong.</p>
-            </div>
-            
-            : <Table
-              list={list}
-              onDismiss={this.onDismiss}
-            />
-          }
+          <TableWithError
+            error={error}
+            list={list}
+            onDismiss={this.onDismiss}
+          />
         </div>
         <div className="interactions">
           <ButtonWithLoading
@@ -111,7 +106,7 @@ class App extends Component {
       &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
     axios(url)
       .then(result => this.setSearchTopStores(result.data))
-      .catch(error => this.setState({ error }))
+      .catch(error => this.setState({ error, isLoading: false }))
   }
   
   // stores response in state.results, appending to existing hits
@@ -197,7 +192,15 @@ const withLoading = Component => ({ isLoading, ...rest }) =>
     <i className="fa fa-spinner fa-spin fa-3x"></i>
   : <Component { ...rest } />
 
+const withError = Component => ({ error, ...rest }) =>
+  error ?
+    <div className="interactions">
+      <p>Something went wrong.</p>
+    </div>
+  : <Component { ...rest } />
+
 const ButtonWithLoading = withLoading(Button);
+const TableWithError = withError(Table);
 
 export default App;
 
