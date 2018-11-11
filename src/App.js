@@ -63,6 +63,7 @@ class App extends Component {
             value={searchTerm}
             onChange={this.onSearchChange}
             onSubmit={this.onSearchSubmit}
+            onFocus={this.onFocus}
           >
             Search
           </Search>
@@ -83,6 +84,11 @@ class App extends Component {
         </div>
       </div>
     );
+  }
+
+  // clear search input on focus
+  onFocus = () => {
+    this.setState({searchTerm: ''});
   }
   
   // control search input
@@ -160,14 +166,16 @@ class Search extends Component {
   componentDidMount() {
     if (this.input) { this.input.focus(); }
   }
+
   render() {
-    const { value, onChange, onSubmit, children } = this.props;
+    const { value, onChange, onSubmit, onFocus, children } = this.props;
     return (
       <form onSubmit={onSubmit}>
         <input
           type="text"
           value={value}
           onChange={onChange}
+          onFocus={onFocus}
           ref={el => this.input = el}
         />
         <button type="submit">
@@ -289,7 +297,7 @@ const Sort = ({ sortKey, onSort, children, activeSortKey, isSortReverse }) => {
 
 
 const Arrow = ({ direction }) =>
-  <i class={`fa fa-arrow-${direction}`}></i>
+  <i className={`fa fa-arrow-${direction}`}></i>
 
 // a button w/ a click listener
 const Button = ({ onClick, className = '', children }) => 
