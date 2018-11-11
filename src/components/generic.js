@@ -39,7 +39,15 @@ const HN_URL = (searchTerm, page) =>
   + `&page=${page}&hitsPerPage=25`;
 
 const REDDIT_URL = (searchTerm, after) =>
-  `https://reddit.com/search.json?q=${searchTerm}&sort=top&count=25`
+  `https://www.reddit.com/search.json?q=${searchTerm}&sort=top&count=25`
   + `&after=${after}`;
 
-export { HN_URL, REDDIT_URL };
+const withSource = source => {
+  switch (source) {
+    case 'HN': return HN_URL;
+    case 'Reddit': return REDDIT_URL;
+    default: return HN_URL;
+  }
+}
+
+export { withSource };

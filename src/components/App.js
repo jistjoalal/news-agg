@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import '../styles/App.css';
-import { Button, ButtonWithLoading, HN_URL, REDDIT_URL } from './generic';
+import { Button, ButtonWithLoading, withSource } from './generic';
 import Search from './Search';
 import ResultTable from './ResultTable';
 
@@ -76,7 +76,7 @@ class App extends Component {
     if (source === 'HN') {
       const page = (results && results[searchTerm]
         && results[searchTerm].page) || 0;
-      this.fetchHNTopStories(searchTerm, page + 1);
+      this.fetchStories(searchTerm, page + 1);
     }
     else if (source === 'Reddit') {
       //
@@ -85,19 +85,17 @@ class App extends Component {
 
   getStories = searchTerm => {
     if (this.state.source === 'HN') {
-      this.fetchHNTopStories(searchTerm);
+      this.fetchStories(searchTerm);
     }
     else if (this.state.source === 'Reddit') {
-      // this.fetchRedditTopStories(searchTerm);
+      this.fetchStories(searchTerm);
     }
   }
 
   // makes request to HN API
-  fetchHNTopStories = (searchTerm, page = 0) => {
-    this.setState({ isLoading: true });
-    const url = this.state.source === 'HN' ?
-      HN_URL(searchTerm, page) : REDDIT_URL(searchTerm, page);
-    axios(url)
+  fetchStories = (searchTerm, page = 0) => {
+    this.setState({ isLoading: true, error: null });
+    axios(withSource(this.state.source)(searchTerm, page))
       .then(result => this.setSearchTopStories(result.data))
       .catch(error => this.setState({ error, isLoading: false }))
   }
@@ -110,6 +108,7 @@ class App extends Component {
     }
     else if (this.state.source === 'Reddit') {
       const { children, after } = response.data;
+      console.log(children, after);
       this.setState(this.updateSearchTopStories(children, after));
     }
   }
