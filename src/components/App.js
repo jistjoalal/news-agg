@@ -25,7 +25,7 @@ class App extends Component {
     this.setState(prevState => {
       return { searchKey: prevState.searchTerm }
     });
-    this.getStories(this.state.searchTerm);
+    this.fetchStories(this.state.searchTerm);
   }
   
   render() {
@@ -56,6 +56,7 @@ class App extends Component {
             onDismiss={this.onDismiss}
             isSortReverse={isSortReverse}
             error={error}
+            source={source}
           />
         </div>
         <div className="interactions">
@@ -83,15 +84,6 @@ class App extends Component {
     }
   }
 
-  getStories = searchTerm => {
-    if (this.state.source === 'HN') {
-      this.fetchStories(searchTerm);
-    }
-    else if (this.state.source === 'Reddit') {
-      this.fetchStories(searchTerm);
-    }
-  }
-
   // makes request to HN API
   fetchStories = (searchTerm, page = 0) => {
     this.setState({ isLoading: true, error: null });
@@ -107,14 +99,15 @@ class App extends Component {
       this.setState(this.updateSearchTopStories(hits, page));
     }
     else if (this.state.source === 'Reddit') {
-      const { children, after } = response.data;
-      console.log(children, after);
+      const children = response.data.children.map(c => c.data);
+      const after = response.data.after;
       this.setState(this.updateSearchTopStories(children, after));
     }
   }
 
   onSourceChange = event => {
     this.setState({ source: event.target.value });
+    this.fetchStories(this.state.searchKey);
   }
 
   // clear search input on focus
@@ -135,7 +128,7 @@ class App extends Component {
     });
 
     if (this.needsToSearchTopStories(searchTerm)) {
-      this.getStories(searchTerm);
+      this.fetchStories(searchTerm);
     }
     e.preventDefault();
   }

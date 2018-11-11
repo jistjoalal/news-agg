@@ -4,12 +4,37 @@ import classNames from 'classnames';
 
 import { Button, SortArrow, withError } from './generic';
 
-const SORTS = {
-  NONE: list => list,
-  TITLE: list => sortBy(list, 'title'),
-  DATE: list => sortBy(list, 'created_at'),
-  COMMENTS: list => sortBy(list, 'num_comments').reverse(),
-  POINTS: list => sortBy(list, 'points').reverse(),
+const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
+
+const COLUMNS = {
+  HN: {
+    TITLE: 'title',
+    DATE: 'created_at',
+    COMMENTS: 'num_comments',
+    POINTS: 'points',
+    URL: 'url',
+    ID: 'objectID',
+    COMMENTS_URL: 'https://news.ycombinator.com/item?id='
+  },
+  Reddit: {
+    TITLE: 'title',
+    DATE: 'created',
+    COMMENTS: 'num_comments',
+    POINTS: 'score',
+    URL: 'url',
+    ID: 'id',
+    COMMENTS_URL: 'https://news.ycombinator.com/item?id='
+  }
+};
+
+const SORTS = source => {
+  return {
+    NONE: list => list,
+    TITLE: list => sortBy(list, COLUMNS[source].TITLE),
+    DATE: list => sortBy(list, COLUMNS[source].DATE),
+    COMMENTS: list => sortBy(list, COLUMNS[source].COMMENTS).reverse(),
+    POINTS: list => sortBy(list, COLUMNS[source].POINTS).reverse(),
+  }
 };
 
 // table formatted for results from HN API
@@ -32,10 +57,9 @@ class Table extends Component {
   }
 
   render() {
-    const { list, onDismiss } = this.props;
+    const { list, onDismiss, source } = this.props;
     const { sortKey, isSortReverse } = this.state;
-    const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
-    const sortedList = SORTS[sortKey](list);
+    const sortedList = SORTS(source)[sortKey](list);
     const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
     return (
       <div className="table">
@@ -72,34 +96,10 @@ class Table extends Component {
             <i className="fa fa-trash"></i>
           </span>
         </div>
-        {toggleSortedList.map(item => {
-          const { url, title, created_at, objectID, num_comments, 
-            points } = item;
+        {toggleSortedList.map((item, i) => {
           return (
-            <div key={objectID} className="table-row">
-              <span style={lg}>
-                <a href={url}>{title}</a>
-              </span>
-              <span style={md}>
-                {created_at ? created_at.slice(0,10) : '?'}
-              </span>
-              <span style={sm}>
-                <a href={`https://news.ycombinator.com/item?id=${objectID}`}>
-                  {num_comments}
-                </a>
-              </span>
-              <span style={sm}>
-                {points}
-              </span>
-              <span style={sm}>
-                <Button
-                  onClick={() => onDismiss(objectID)}
-                  className="button-inline"
-                >
-                  Dismiss
-                </Button>
-              </span>
-            </div>
+            <TableRow key={i} source={source}
+              item={item} onDismiss={onDismiss}/>
           );
         })}
       </div>
@@ -107,6 +107,52 @@ class Table extends Component {
   }
 }
 
+const itemBySource = (source, item) => {
+  let result = {};
+  Object.entries(COLUMNS[source]).forEach(c =>
+    result[c[0]] = item[c[1]]
+  );
+  return result;
+}
+
+const DateString = ({ DATE, source }) => {
+  switch (source) {
+    case 'HN': return DATE ? DATE.slice(0,10) : '?';
+    case 'Reddit': return new Date(DATE*1000).toDateString();
+    default: return '?';
+  }
+}
+
+const TableRow = ({ item, onDismiss, source }) => {
+  const { URL, TITLE, DATE, ID, COMMENTS, COMMENTS_URL,
+    POINTS } = itemBySource(source, item);
+  return (
+    <div key={ID} className="table-row">
+      <span style={lg}>
+        <a href={URL}>{TITLE}</a>
+      </span>
+      <span style={md}>
+        <DateString DATE={DATE} source={source} />
+      </span>
+      <span style={sm}>
+        <a href={`${COMMENTS_URL}${ID}`}>
+          {COMMENTS}
+        </a>
+      </span>
+      <span style={sm}>
+        {POINTS}
+      </span>
+      <span style={sm}>
+        <Button
+          onClick={() => onDismiss(ID)}
+          className="button-inline"
+        >
+          Dismiss
+        </Button>
+      </span>
+    </div>
+  );
+}
 const Sort = ({ sortKey, onSort, children, activeSortKey, isSortReverse }) => {
   const active = sortKey === activeSortKey;
   const direction = isSortReverse ? 'down' : 'up';
