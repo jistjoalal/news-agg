@@ -8,6 +8,7 @@ exports[`App has a valid snapshot 1`] = `
     className="interactions"
   >
     <form
+      className="search"
       onSubmit={[Function]}
     >
       <input
@@ -17,6 +18,7 @@ exports[`App has a valid snapshot 1`] = `
         value="redux"
       />
       <button
+        className="button-clickable"
         type="submit"
       >
         Search
@@ -99,7 +101,9 @@ exports[`App has a valid snapshot 1`] = `
             }
           }
         >
-          Archive
+          <i
+            class="fa fa-trash"
+          />
         </span>
       </div>
     </div>
@@ -200,7 +204,9 @@ exports[`ResultTable has a valid snapshot 1`] = `
         }
       }
     >
-      Archive
+      <i
+        class="fa fa-trash"
+      />
     </span>
   </div>
   <div
@@ -327,11 +333,14 @@ exports[`ResultTable has a valid snapshot 1`] = `
 `;
 
 exports[`Search has a valid snapshot 1`] = `
-<form>
+<form
+  className="search"
+>
   <input
     type="text"
   />
   <button
+    className="button-clickable"
     type="submit"
   >
     Search
