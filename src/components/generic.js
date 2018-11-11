@@ -1,6 +1,6 @@
 import React from 'react';
 
-// a button w/ a click listener
+/* UI stuff */
 const Button = ({ onClick, className = '', children }) => 
   <button onClick={onClick} className={className}>
     {children}
@@ -31,3 +31,15 @@ const ButtonWithLoading = withLoading(Button);
 
 export { Button, Arrow, withLoading, withError, withNull, SortArrow,
   ButtonWithLoading };
+
+/* API stuff */
+
+const HN_URL = (searchTerm, page) =>
+  `https://hn.algolia.com/api/v1/search?query=${searchTerm}`
+  + `&page=${page}&hitsPerPage=25`;
+
+const REDDIT_URL = (searchTerm, after) =>
+  `https://reddit.com/search.json?q=${searchTerm}&sort=top&count=25`
+  + `&after=${after}`;
+
+export { HN_URL, REDDIT_URL };

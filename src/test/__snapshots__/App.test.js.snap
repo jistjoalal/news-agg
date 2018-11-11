@@ -7,6 +7,20 @@ exports[`App has a valid snapshot 1`] = `
   <div
     className="interactions"
   >
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="radio"
+      value="HN"
+    />
+    HN
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="radio"
+      value="Reddit"
+    />
+    Reddit
     <form
       className="search"
       onSubmit={[Function]}
@@ -102,7 +116,7 @@ exports[`App has a valid snapshot 1`] = `
           }
         >
           <i
-            class="fa fa-trash"
+            className="fa fa-trash"
           />
         </span>
       </div>
@@ -205,7 +219,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
       }
     >
       <i
-        class="fa fa-trash"
+        className="fa fa-trash"
       />
     </span>
   </div>

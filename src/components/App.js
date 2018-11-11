@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import '../styles/App.css';
+import { Button, ButtonWithLoading, HN_URL, REDDIT_URL } from './generic';
 import Search from './Search';
 import ResultTable from './ResultTable';
-import { Button, ButtonWithLoading } from './generic';
 
 const DEFAULT_QUERY = 'redux';
-const DEFAULT_HPP = '100';
-
-const PATH_BASE = 'https://hn.algolia.com/api/v1';
-const PATH_SEARCH = '/search';
-const PARAM_SEARCH = 'query=';
-const PARAM_PAGE = 'page=';
-const PARAM_HPP = 'hitsPerPage=';
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +17,7 @@ class App extends Component {
       searchTerm: DEFAULT_QUERY,
       error: null,
       isLoading: false,
+      source: 'HN',
     };
   }
   
@@ -31,20 +25,24 @@ class App extends Component {
     this.setState(prevState => {
       return { searchKey: prevState.searchTerm }
     });
-    this.fetchSearchTopStories(this.state.searchTerm);
+    this.getStories(this.state.searchTerm);
   }
   
   render() {
     const { searchTerm, results, searchKey, error, isLoading,
-      isSortReverse }  = this.state;
-    const page = (results && results[searchKey]
-      && results[searchKey].page) || 0;
+      isSortReverse, source }  = this.state;
     const list = (results && results[searchKey]
       && results[searchKey].hits) || [];
     
     return (
       <div className="page">
         <div className="interactions">
+          <input type="radio" value="HN"
+            checked={source === 'HN'}
+            onChange={this.onSourceChange} />HN
+          <input type="radio" value="Reddit"
+            checked={source === 'Reddit'}
+            onChange={this.onSourceChange} />Reddit
           <Search
             value={searchTerm}
             onChange={this.onSearchChange}
@@ -64,13 +62,60 @@ class App extends Component {
           <ButtonWithLoading
             className="button-clickable"
             isLoading={isLoading}
-            onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
+            onClick={() => this.getMoreStories(searchKey)}
           >
             More
           </ButtonWithLoading>
         </div>
       </div>
     );
+  }
+
+  getMoreStories = searchTerm => {
+    const { source, results } = this.state;
+    if (source === 'HN') {
+      const page = (results && results[searchTerm]
+        && results[searchTerm].page) || 0;
+      this.fetchHNTopStories(searchTerm, page + 1);
+    }
+    else if (source === 'Reddit') {
+      //
+    }
+  }
+
+  getStories = searchTerm => {
+    if (this.state.source === 'HN') {
+      this.fetchHNTopStories(searchTerm);
+    }
+    else if (this.state.source === 'Reddit') {
+      // this.fetchRedditTopStories(searchTerm);
+    }
+  }
+
+  // makes request to HN API
+  fetchHNTopStories = (searchTerm, page = 0) => {
+    this.setState({ isLoading: true });
+    const url = this.state.source === 'HN' ?
+      HN_URL(searchTerm, page) : REDDIT_URL(searchTerm, page);
+    axios(url)
+      .then(result => this.setSearchTopStories(result.data))
+      .catch(error => this.setState({ error, isLoading: false }))
+  }
+  
+  // stores response in state.results, appending to existing hits
+  setSearchTopStories = response => {
+    if (this.state.source === 'HN') {
+      const { hits, page } = response;
+      this.setState(this.updateSearchTopStories(hits, page));
+    }
+    else if (this.state.source === 'Reddit') {
+      const { children, after } = response.data;
+      this.setState(this.updateSearchTopStories(children, after));
+    }
+  }
+
+  onSourceChange = event => {
+    this.setState({ source: event.target.value });
   }
 
   // clear search input on focus
@@ -91,7 +136,7 @@ class App extends Component {
     });
 
     if (this.needsToSearchTopStories(searchTerm)) {
-      this.fetchSearchTopStories(searchTerm);
+      this.getStories(searchTerm);
     }
     e.preventDefault();
   }
@@ -115,24 +160,6 @@ class App extends Component {
 
   // is result for searchTerm cached already?
   needsToSearchTopStories = searchTerm => !this.state.results[searchTerm];
-
-  // makes request to HN API
-  fetchSearchTopStories = (searchTerm, page = 0) => {
-    this.setState({ isLoading: true });
-
-    const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}`
-      + `&${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`;
-
-    axios(url)
-      .then(result => this.setSearchTopStories(result.data))
-      .catch(error => this.setState({ error, isLoading: false }))
-  }
-  
-  // stores response in state.results, appending to existing hits
-  setSearchTopStories = response => {
-    const { hits, page } = response;
-    this.setState(this.updateSearchTopStories(hits, page));
-  }
 
   // appends additional hits from 'more' button to page
   updateSearchTopStories = (hits, page) => prevState => {
