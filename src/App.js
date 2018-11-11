@@ -16,7 +16,7 @@ const PARAM_HPP = 'hitsPerPage=';
 const SORTS = {
   NONE: list => list,
   TITLE: list => sortBy(list, 'title'),
-  AUTHOR: list => sortBy(list, 'author'),
+  DATE: list => sortBy(list, 'created_at'),
   COMMENTS: list => sortBy(list, 'num_comments').reverse(),
   POINTS: list => sortBy(list, 'points').reverse(),
 };
@@ -214,10 +214,10 @@ class Table extends Component {
             </Sort>
           </span>
           <span style={md}>
-            <Sort sortKey={'AUTHOR'} onSort={this.onSort}
+            <Sort sortKey={'DATE'} onSort={this.onSort}
               activeSortKey={sortKey} isSortReverse={isSortReverse}
             >
-              Author
+              Date
             </Sort>
           </span>
           <span style={sm}>
@@ -239,23 +239,27 @@ class Table extends Component {
           </span>
         </div>
         {toggleSortedList.map(item => {
+          const { url, title, created_at, objectID, num_comments, 
+            points } = item;
           return (
-            <div key={item.objectID} className="table-row">
+            <div key={objectID} className="table-row">
               <span style={lg}>
-                <a href={item.url}>{item.title}</a>
+                <a href={url}>{title}</a>
               </span>
               <span style={md}>
-                {item.author}
+                {created_at.slice(0,10)}
               </span>
               <span style={sm}>
-                {item.num_comments}
+                <a href={`https://news.ycombinator.com/item?id=${objectID}`}>
+                  {num_comments}
+                </a>
               </span>
               <span style={sm}>
-                {item.points}
+                {points}
               </span>
               <span style={sm}>
                 <Button
-                  onClick={() => onDismiss(item.objectID)}
+                  onClick={() => onDismiss(objectID)}
                   className="button-inline"
                 >
                   Dismiss
