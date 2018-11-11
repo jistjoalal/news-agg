@@ -1,11 +1,11 @@
 body {
-  color: #222;
-  background: #f4f4f4;
+  color: #f4f4f4;
+  background: #222;
   font: 400 14px CoreSans, Arial, sans-serif;
 }
 
 a {
-  color: #222;
+  color: #000;
   text-decoration: none;
 }
 
@@ -25,9 +25,8 @@ input {
   outline: none;
   margin-right: 10px;
   border: 1px solid #ddd;
+  color: #ddd;
   background: transparent;
-  color: #808080;
-  cursor: pointer;
 }
 
 button:hover {

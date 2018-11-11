@@ -25,14 +25,6 @@ class App extends Component {
       error: null,
       isLoading: false,
     };
-
-    this.needsToSearchTopStories = this.needsToSearchTopStories.bind(this);
-    this.setSearchTopStories = this.setSearchTopStories.bind(this);
-    this.updateSearchTopStories = this.updateSearchTopStories.bind(this);
-    this.fetchSearchTopStories = this.fetchSearchTopStories.bind(this);
-    this.onSearchChange = this.onSearchChange.bind(this);
-    this.onSearchSubmit = this.onSearchSubmit.bind(this);
-    this.onDismiss = this.onDismiss.bind(this);
   }
   
   componentDidMount() {
@@ -70,6 +62,7 @@ class App extends Component {
         </div>
         <div className="interactions">
           <ButtonWithLoading
+            className="button-clickable"
             isLoading={isLoading}
             onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
           >
@@ -140,6 +133,7 @@ class App extends Component {
     this.setState(this.updateSearchTopStories(hits, page));
   }
 
+  // appends additional hits from 'more' button to page
   updateSearchTopStories = (hits, page) => prevState => {
     const { searchKey, results } = prevState;
     const oldHits = results && results[searchKey]
@@ -156,5 +150,4 @@ class App extends Component {
 }
 
 export default App;
-
 export { Button, Search };

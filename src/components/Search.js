@@ -9,7 +9,7 @@ class Search extends Component {
   render() {
     const { value, onChange, onSubmit, onFocus, children } = this.props;
     return (
-      <form onSubmit={onSubmit}>
+      <form className="search" onSubmit={onSubmit}>
         <input
           type="text"
           value={value}
@@ -17,7 +17,7 @@ class Search extends Component {
           onFocus={onFocus}
           ref={el => this.input = el}
         />
-        <button type="submit">
+        <button className="button-clickable" type="submit">
           {children}
         </button>
       </form>

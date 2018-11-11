@@ -24,32 +24,30 @@
   font-size: 16px;
 }
 
-.table-row {
+.table-row, .table-header {
   display: flex;
   line-height: 24px;
   white-space: nowrap;
   margin: 10px 0;
   padding: 10px;
-  background: #fff;
+  background: #939291;
+  color: #333231;
   border: 1px solid #e3e3e3;
 }
 
-.table-header > span {
-  overflow: hidden;
-  text-overflow: ellipsis;
+.table-header > span, .table-row > span {
   padding: 0 5px;
 }
 
 .table-row > span {
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 5px;
 }
 
 .button-inline {
   border-width: 0;
   background: transparent;
-  color: inherit;
+  color: #000;
   text-align: inherit;
   -webkit-font-smoothing: inherit;
   padding: 0;
@@ -60,4 +58,31 @@
 .button-active {
   border-radius: 0;
   border-bottom: 1px solid #38BB6C;
+}
+
+.button-clickable {
+  border: none;
+  padding: 10px;
+  background: #939291;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-clickable:hover {
+  border-width: 2px;
+  padding: 9px;
+  background: #bbb;
+}
+
+.button-clickable:active {
+  border-width: 3px;
+  padding: 8px;
+  background: #ddd;
+}
+
+.search {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
