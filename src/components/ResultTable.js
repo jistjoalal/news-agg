@@ -69,7 +69,7 @@ class Table extends Component {
             </Sort>
           </span>
           <span style={sm}>
-            <i class="fa fa-trash"></i>
+            <i className="fa fa-trash"></i>
           </span>
         </div>
         {toggleSortedList.map(item => {

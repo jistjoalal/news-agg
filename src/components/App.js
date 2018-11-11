@@ -7,7 +7,7 @@ import ResultTable from './ResultTable';
 import { Button, ButtonWithLoading } from './generic';
 
 const DEFAULT_QUERY = 'redux';
-const DEFAULT_HPP = '10';
+const DEFAULT_HPP = '100';
 
 const PATH_BASE = 'https://hn.algolia.com/api/v1';
 const PATH_SEARCH = '/search';
@@ -120,8 +120,9 @@ class App extends Component {
   fetchSearchTopStories = (searchTerm, page = 0) => {
     this.setState({ isLoading: true });
 
-    const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}
-      &${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`
+    const url = `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}`
+      + `&${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`;
+
     axios(url)
       .then(result => this.setSearchTopStories(result.data))
       .catch(error => this.setState({ error, isLoading: false }))
