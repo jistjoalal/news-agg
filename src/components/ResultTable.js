@@ -9,7 +9,7 @@ const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
 const COLUMNS = {
   HN: {
     TITLE: 'title',
-    DATE: 'created_at',
+    DATE: 'created_at_i',
     COMMENTS: 'num_comments',
     POINTS: 'points',
     URL: 'url',
@@ -115,12 +115,8 @@ const itemBySource = (source, item) => {
   return result;
 }
 
-const DateString = ({ DATE, source }) => {
-  switch (source) {
-    case 'HN': return DATE ? DATE.slice(0,10) : '?';
-    case 'Reddit': return new Date(DATE*1000).toDateString();
-    default: return '?';
-  }
+const DateString = ({ DATE }) => {
+  return new Date(DATE*1000).toDateString();
 }
 
 const TableRow = ({ item, onDismiss, source }) => {
@@ -132,7 +128,7 @@ const TableRow = ({ item, onDismiss, source }) => {
         <a href={URL}>{TITLE}</a>
       </span>
       <span style={md}>
-        <DateString DATE={DATE} source={source} />
+        <DateString DATE={DATE} />
       </span>
       <span style={sm}>
         <a href={`${COMMENTS_URL}${ID}`}>

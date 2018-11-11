@@ -18,6 +18,7 @@ class App extends Component {
       error: null,
       isLoading: false,
       source: 'HN',
+      needFetch: true,
     };
   }
   
@@ -25,14 +26,20 @@ class App extends Component {
     this.setState(prevState => {
       return { searchKey: prevState.searchTerm }
     });
-    this.fetchStories(this.state.searchTerm);
+  }
+
+  componentDidUpdate() {
+    if (this.state.needFetch) {
+      this.fetchStories(this.state.searchKey);
+      this.setState({ needFetch: false });
+    }
   }
   
   render() {
     const { searchTerm, results, searchKey, error, isLoading,
       isSortReverse, source }  = this.state;
-    const list = (results && results[searchKey]
-      && results[searchKey].hits) || [];
+    const list = (results && results[source] && results[source][searchKey]
+      && results[source][searchKey].hits) || [];
     
     return (
       <div className="page">
@@ -63,7 +70,7 @@ class App extends Component {
           <ButtonWithLoading
             className="button-clickable"
             isLoading={isLoading}
-            onClick={() => this.getMoreStories(searchKey)}
+            onClick={() => this.fetchMoreStories(searchKey)}
           >
             More
           </ButtonWithLoading>
@@ -72,7 +79,7 @@ class App extends Component {
     );
   }
 
-  getMoreStories = searchTerm => {
+  fetchMoreStories = searchTerm => {
     const { source, results } = this.state;
     if (source === 'HN') {
       const page = (results && results[searchTerm]
@@ -94,6 +101,7 @@ class App extends Component {
   
   // stores response in state.results, appending to existing hits
   setSearchTopStories = response => {
+    console.log(response);
     if (this.state.source === 'HN') {
       const { hits, page } = response;
       this.setState(this.updateSearchTopStories(hits, page));
@@ -106,8 +114,7 @@ class App extends Component {
   }
 
   onSourceChange = event => {
-    this.setState({ source: event.target.value });
-    this.fetchStories(this.state.searchKey);
+    this.setState({ source: event.target.value, needFetch: true });
   }
 
   // clear search input on focus
@@ -134,17 +141,20 @@ class App extends Component {
   }
 
   // remove hit from result list
+  // TODO: get working for reddit
   onDismiss = id => {
     this.setState(prevState => {
-      const { searchKey, results } = prevState;
-      const { hits, page } = results[searchKey];
+      const { searchKey, results, source } = prevState;
+      const { hits, page } = results[source][searchKey];
   
       const isNotId = item => item.objectID !== id;
       const updatedHits = hits.filter(isNotId);
       return {
         results: {
-          ...results,
-          [searchKey]: { hits: updatedHits, page }
+          [source]: {
+            ...results,
+            [searchKey]: { hits: updatedHits, page }
+          }
         }
       };
     });
@@ -155,17 +165,19 @@ class App extends Component {
 
   // appends additional hits from 'more' button to page
   updateSearchTopStories = (hits, page) => prevState => {
-    const { searchKey, results } = prevState;
+    const { searchKey, results, source } = prevState;
     const oldHits = results && results[searchKey]
       ? results[searchKey].hits : [];
     const updatedHits = [...oldHits, ...hits];
-    return { 
-      results: { 
-        ...results,
-        [searchKey]: { hits: updatedHits, page }
+    return {
+      results: {
+        [source]: { 
+          ...results,
+          [searchKey]: { hits: updatedHits, page }
+        }
       },
       isLoading: false
-    };
+    }
   }
 }
 
