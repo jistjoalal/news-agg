@@ -1,41 +1,8 @@
 import React, { Component } from 'react';
-import { sortBy } from 'lodash';
 import classNames from 'classnames';
 
-import { Button, SortArrow, withError } from './generic';
-
-const [ lg, md, sm ] = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
-
-const COLUMNS = {
-  HN: {
-    TITLE: 'title',
-    DATE: 'created_at_i',
-    COMMENTS: 'num_comments',
-    POINTS: 'points',
-    URL: 'url',
-    ID: 'objectID',
-    COMMENTS_URL: 'https://news.ycombinator.com/item?id='
-  },
-  Reddit: {
-    TITLE: 'title',
-    DATE: 'created',
-    COMMENTS: 'num_comments',
-    POINTS: 'score',
-    URL: 'url',
-    ID: 'id',
-    COMMENTS_URL: 'https://news.ycombinator.com/item?id='
-  }
-};
-
-const SORTS = source => {
-  return {
-    NONE: list => list,
-    TITLE: list => sortBy(list, COLUMNS[source].TITLE),
-    DATE: list => sortBy(list, COLUMNS[source].DATE),
-    COMMENTS: list => sortBy(list, COLUMNS[source].COMMENTS).reverse(),
-    POINTS: list => sortBy(list, COLUMNS[source].POINTS).reverse(),
-  }
-};
+import { Button, SortArrow, withError, COLUMNS, COLUMN_SIZES,
+  SORTS } from './generic';
 
 // table formatted for results from HN API
 class Table extends Component {
@@ -61,6 +28,7 @@ class Table extends Component {
     const { sortKey, isSortReverse } = this.state;
     const sortedList = SORTS(source)[sortKey](list);
     const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
+    const [lg, md, sm] = COLUMN_SIZES;
     return (
       <div className="table">
         <div className="table-header">
@@ -122,6 +90,7 @@ const DateString = ({ DATE }) => {
 const TableRow = ({ item, onDismiss, source }) => {
   const { URL, TITLE, DATE, ID, COMMENTS, COMMENTS_URL,
     POINTS } = itemBySource(source, item);
+  const [lg, md, sm] = COLUMN_SIZES;
   return (
     <div key={ID} className="table-row">
       <span style={lg}>

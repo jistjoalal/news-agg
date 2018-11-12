@@ -1,4 +1,5 @@
 import React from 'react';
+import { sortBy } from 'lodash';
 
 /* UI stuff */
 const Button = ({ onClick, className = '', children }) => 
@@ -50,4 +51,37 @@ const withSource = source => {
   }
 }
 
-export { withSource };
+const COLUMN_SIZES = [{width: '40%'}, {width: '30%'}, {width: '10%'}];
+
+const COLUMNS = {
+  HN: {
+    TITLE: 'title',
+    DATE: 'created_at_i',
+    COMMENTS: 'num_comments',
+    POINTS: 'points',
+    URL: 'url',
+    ID: 'objectID',
+    COMMENTS_URL: 'https://news.ycombinator.com/item?id='
+  },
+  Reddit: {
+    TITLE: 'title',
+    DATE: 'created',
+    COMMENTS: 'num_comments',
+    POINTS: 'score',
+    URL: 'url',
+    ID: 'id',
+    COMMENTS_URL: 'https://news.ycombinator.com/item?id='
+  }
+};
+
+const SORTS = source => {
+  return {
+    NONE: list => list,
+    TITLE: list => sortBy(list, COLUMNS[source].TITLE),
+    DATE: list => sortBy(list, COLUMNS[source].DATE),
+    COMMENTS: list => sortBy(list, COLUMNS[source].COMMENTS).reverse(),
+    POINTS: list => sortBy(list, COLUMNS[source].POINTS).reverse(),
+  }
+};
+
+export { COLUMN_SIZES, COLUMNS, SORTS, withSource };

@@ -30,7 +30,6 @@ class App extends Component {
     const { searchTerm, source } = this.state;
     if (this.state.needFetch) {
       if (this.needsToSearchTopStories(searchTerm, source)) {
-        console.log('fetching')
         this.fetchStories(searchTerm);
       }
       this.setState({ needFetch: false });
@@ -147,13 +146,12 @@ class App extends Component {
 
   // remove hit from result list
   // TODO: reddit onDismiss
+  // item.objectID needs to become general id column
   onDismiss = id => {
     this.setState(prevState => {
       const { searchKey, results, source } = prevState;
       const { hits, page } = results[source][searchKey];
-  
-      const isNotId = item => item.objectID !== id;
-      const updatedHits = hits.filter(isNotId);
+      const updatedHits = hits.filter(item => item.objectID !== id);
       return {
         results: {
           [source]: {
@@ -168,7 +166,6 @@ class App extends Component {
   // is result for searchTerm cached already?
   needsToSearchTopStories = (searchTerm, source) => {
     const { results } = this.state;
-    console.log(results)
     if (results && results[source] && results[source][searchTerm]) {
       return false;
     }
