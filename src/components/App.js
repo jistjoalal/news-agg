@@ -6,8 +6,6 @@ import { Button, ButtonWithLoading, withSource } from './generic';
 import Search from './Search';
 import ResultTable from './ResultTable';
 
-//TODO: move to github to link w/ wakatime
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,8 +27,12 @@ class App extends Component {
   }
 
   componentDidUpdate() {
+    const { searchTerm, source } = this.state;
     if (this.state.needFetch) {
-      this.fetchStories(this.state.searchKey);
+      if (this.needsToSearchTopStories(searchTerm, source)) {
+        console.log('fetching')
+        this.fetchStories(searchTerm);
+      }
       this.setState({ needFetch: false });
     }
   }
@@ -105,7 +107,6 @@ class App extends Component {
   
   // stores response in state.results, appending to existing hits
   setSearchTopStories = response => {
-    console.log(response);
     if (this.state.source === 'HN') {
       const { hits, page } = response;
       this.setState(this.updateSearchTopStories(hits, page));
@@ -133,12 +134,12 @@ class App extends Component {
 
   // submit search input
   onSearchSubmit = e => {
-    const { searchTerm } = this.state;
+    const { searchTerm, source } = this.state;
     this.setState(prevState => {
       return { searchKey: prevState.searchTerm }
     });
 
-    if (this.needsToSearchTopStories(searchTerm)) {
+    if (this.needsToSearchTopStories(searchTerm, source)) {
       this.fetchStories(searchTerm);
     }
     e.preventDefault();
@@ -165,7 +166,14 @@ class App extends Component {
   }
 
   // is result for searchTerm cached already?
-  needsToSearchTopStories = searchTerm => !this.state.results[searchTerm];
+  needsToSearchTopStories = (searchTerm, source) => {
+    const { results } = this.state;
+    console.log(results)
+    if (results && results[source] && results[source][searchTerm]) {
+      return false;
+    }
+    return true;
+  }
 
   // appends additional hits from 'more' button to page
   updateSearchTopStories = (hits, page) => prevState => {
@@ -175,8 +183,8 @@ class App extends Component {
     const updatedHits = [...oldHits, ...hits];
     return {
       results: {
+        ...results,
         [source]: { 
-          ...results,
           [searchKey]: { hits: updatedHits, page }
         }
       },
