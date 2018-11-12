@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import '../styles/App.css';
+import '../styles/App.scss';
 import { Button, ButtonWithLoading, withSource } from './generic';
 import Search from './Search';
 import ResultTable from './ResultTable';
@@ -44,12 +44,16 @@ class App extends Component {
     return (
       <div className="page">
         <div className="interactions">
-          <input type="radio" value="HN"
-            checked={source === 'HN'}
-            onChange={this.onSourceChange} />HN
-          <input type="radio" value="Reddit"
-            checked={source === 'Reddit'}
-            onChange={this.onSourceChange} />Reddit
+          <div className="SourceSelect">
+            <input className="SourceSelect-radio"
+              type="radio" value="HN"
+              checked={source === 'HN'}
+              onChange={this.onSourceChange} />HN
+            <input className="SourceSelect-radio"
+              type="radio" value="Reddit"
+              checked={source === 'Reddit'}
+              onChange={this.onSourceChange} />Reddit
+          </div>
           <Search
             value={searchTerm}
             onChange={this.onSearchChange}
