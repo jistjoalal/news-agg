@@ -1,13 +1,19 @@
 import React from 'react';
+import classNames from 'classnames';
 
-/* UI stuff */
+/* general UI stuff */
+
 const Button = ({ children, ...rest }) => 
   <button { ...rest }>
     {children}
   </button>
 
+const buttonStyles = active =>
+  classNames('button-inline', {'button-active': active})
+
+// direction: true = up
 const Arrow = ({ direction }) =>
-  <i className={`fa fa-arrow-${direction}`}></i>
+  <i className={`fa fa-arrow-${direction ? 'up' : 'down'}`}></i>
 
 const withLoading = Component => ({ isLoading, ...rest }) =>
   isLoading ?
@@ -26,11 +32,15 @@ const withNull = Component => ({ show, ...rest }) =>
     <Component { ...rest } />
   : null;
 
+const DateString = ({ DATE }) => {
+  return new Date(DATE*1000).toDateString();
+}
+
 const SortArrow = withNull(Arrow);
 const ButtonWithLoading = withLoading(Button);
 
 export { Button, Arrow, withLoading, withError, withNull, SortArrow,
-  ButtonWithLoading };
+  ButtonWithLoading, buttonStyles };
 
 /* API stuff */
 
@@ -50,7 +60,22 @@ const withSource = source => {
   }
 }
 
-const COLUMN_SIZES = [{width: '60%'}, {width: '30%'}, {width: '10%'}];
+const itemBySource = (source, item) => {
+  let result = {};
+  Object.entries(COLUMNS[source]).forEach(c => {
+    result[c[0]] = item[c[1]];
+  });
+  return result;
+}
+
+const commentsURL = (item, source) => {
+  switch (source) {
+    default: return `https://news.ycombinator.com/item?id=${item.objectID}`
+    case 'Reddit':
+      const base = 'https://www.reddit.com/';
+      return `${base}${item.subreddit_name_prefixed}/comments/${item.id}`;
+  }
+}
 
 const COLUMNS = {
   HN: {
@@ -71,4 +96,22 @@ const COLUMNS = {
   }
 };
 
-export { COLUMN_SIZES, COLUMNS, withSource };
+export { withSource, itemBySource, DateString, commentsURL, COLUMNS };
+
+/* Table UI */
+
+const COLUMN_SIZES = {
+  lg: {width: '60%'},
+  md: {width: '30%'},
+  sm: {width: '10%'}
+}
+
+const COLUMN_HEADERS = {
+  Title: COLUMN_SIZES.lg,
+  Date: COLUMN_SIZES.md,
+  Comments: COLUMN_SIZES.sm,
+  Points: COLUMN_SIZES.sm,
+  Dismiss: COLUMN_SIZES.sm,
+}
+
+export { COLUMN_SIZES, COLUMN_HEADERS };

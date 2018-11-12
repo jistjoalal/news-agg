@@ -277,7 +277,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
       }
     >
       <a
-        href="undefinedy"
+        href="https://news.ycombinator.com/item?id=y"
       >
         1
       </a>
@@ -337,7 +337,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
       }
     >
       <a
-        href="undefinedx"
+        href="https://news.ycombinator.com/item?id=x"
       >
         1
       </a>

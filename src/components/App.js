@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../styles/App.scss';
 
 import Search from './Search';
-import ResultTable from './ResultTable';
+import ResultTable from './Table/ResultTable';
 import SourceSelect from './Sources';
 import Footer from './Footer';
 import { withSource, COLUMNS } from './generic';
