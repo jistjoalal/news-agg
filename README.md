@@ -1,5 +1,3 @@
-# road to react book
-building a hackernews site with react
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# simple news aggregate
+building a hackernews + reddit aggregate starting with the code from
+(Robin Wieruch's)[https://www.robinwieruch.de/] Road To React Book.
