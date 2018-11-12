@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { sortBy } from 'lodash';
 
 import { withError, COLUMNS } from '../generic';
-import HeaderRow from './HeaderRow';
+import TableHeaderRow from './TableHeaderRow';
 import TableRow from './TableRow';
 
 // table formatted for results from API request
@@ -37,7 +37,7 @@ class Table extends Component {
     const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
     return (
       <div className="table">
-        <HeaderRow onSort={this.onSort} sortKey={sortKey}
+        <TableHeaderRow onSort={this.onSort} sortKey={sortKey}
           isSortReverse={isSortReverse} />
         {toggleSortedList.map((item, i) =>
           <TableRow key={i} source={source}

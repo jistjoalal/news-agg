@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Button, ButtonWithLoading } from './generic';
+import { Button, ButtonWithLoading } from '../generic';
 
-const Footer = ({ isLoading, searchKey, fetchMore }) =>
+const Footer = ({ isLoading, source, searchKey, fetchMore }) =>
   <div className="footer">
     <ButtonWithLoading
       className="button-clickable" isLoading={isLoading}
-      onClick={() => fetchMore(searchKey)}
+      onClick={() => fetchMore(source, searchKey)}
     >More
     </ButtonWithLoading>
     <a href="#top" className="backtotop">
