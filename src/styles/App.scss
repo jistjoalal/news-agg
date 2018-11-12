@@ -91,10 +91,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
 
   .SourceSelect-radio {
-    margin: 20px;
-    transform: scale(2);
+    margin: 10px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    input[type="radio"] {
+      transform: scale(2);
+    }
   }
 }

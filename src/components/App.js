@@ -4,8 +4,10 @@ import axios from 'axios';
 import '../styles/App.scss';
 import Search from './Search';
 import ResultTable from './ResultTable';
+import SourceSelect from './Sources';
 import { Button, ButtonWithLoading, withSource, COLUMNS } from './generic';
 
+// TODO: refactor
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,16 +48,7 @@ class App extends Component {
     return (
       <div className="page">
         <div className="interactions">
-          <div className="SourceSelect">
-            <input className="SourceSelect-radio"
-              type="radio" value="HN"
-              checked={source === 'HN'}
-              onChange={this.onSourceChange} />HN
-            <input className="SourceSelect-radio"
-              type="radio" value="Reddit"
-              checked={source === 'Reddit'}
-              onChange={this.onSourceChange} />Reddit
-          </div>
+          <SourceSelect source={source} onChange={this.onSourceChange} />
           <Search
             value={searchTerm}
             onChange={this.onSearchChange}
@@ -196,4 +189,3 @@ class App extends Component {
 }
 
 export default App;
-export { Button, Search };

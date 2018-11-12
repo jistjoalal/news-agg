@@ -10,22 +10,30 @@ exports[`App has a valid snapshot 1`] = `
     <div
       className="SourceSelect"
     >
-      <input
-        checked={true}
+      <span
         className="SourceSelect-radio"
-        onChange={[Function]}
-        type="radio"
-        value="HN"
-      />
-      HN
-      <input
-        checked={false}
+      >
+        <input
+          checked={true}
+          className="SourceSelect-radio"
+          onChange={[Function]}
+          type="radio"
+          value="HN"
+        />
+        HN
+      </span>
+      <span
         className="SourceSelect-radio"
-        onChange={[Function]}
-        type="radio"
-        value="Reddit"
-      />
-      Reddit
+      >
+        <input
+          checked={false}
+          className="SourceSelect-radio"
+          onChange={[Function]}
+          type="radio"
+          value="Reddit"
+        />
+        Reddit
+      </span>
     </div>
     <form
       className="search"
