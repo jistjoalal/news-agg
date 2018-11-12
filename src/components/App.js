@@ -46,7 +46,7 @@ class App extends Component {
     const list = isSaved ? isSaved.hits : [];
     
     return (
-      <div className="page">
+      <div className="page" id="top">
         <div className="interactions">
           <SourceSelect source={source} onChange={this.onSourceChange} />
           <Search
@@ -65,14 +65,18 @@ class App extends Component {
             source={source}
           />
         </div>
-        <div className="interactions">
+        <div className="interactions footer">
           <ButtonWithLoading
             className="button-clickable"
             isLoading={isLoading}
             onClick={() => this.fetchMoreStories(searchKey)}
-          >
-            More
+          >More
           </ButtonWithLoading>
+          <a href="#top" className="backtotop">
+            <Button className="button-clickable" onClick={() => true}>
+                Back to top
+            </Button>
+          </a>
         </div>
       </div>
     );

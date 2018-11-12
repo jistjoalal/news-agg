@@ -2,8 +2,8 @@ import React from 'react';
 import { sortBy } from 'lodash';
 
 /* UI stuff */
-const Button = ({ onClick, className = '', children }) => 
-  <button onClick={onClick} className={className}>
+const Button = ({ children, ...rest }) => 
+  <button { ...rest }>
     {children}
   </button>
 
