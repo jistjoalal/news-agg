@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import '../styles/App.scss';
-import { Button, ButtonWithLoading, withSource } from './generic';
 import Search from './Search';
 import ResultTable from './ResultTable';
+import { Button, ButtonWithLoading, withSource, COLUMNS } from './generic';
 
 class App extends Component {
   constructor(props) {
@@ -145,13 +145,12 @@ class App extends Component {
   }
 
   // remove hit from result list
-  // TODO: reddit onDismiss
-  // item.objectID needs to become general id column
   onDismiss = id => {
     this.setState(prevState => {
       const { searchKey, results, source } = prevState;
       const { hits, page } = results[source][searchKey];
-      const updatedHits = hits.filter(item => item.objectID !== id);
+      const ID_COL = COLUMNS[source].ID;
+      const updatedHits = hits.filter(item => item[ID_COL] !== id);
       return {
         results: {
           [source]: {
