@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import '../styles/App.scss';
+
 import Search from './Search';
 import ResultTable from './ResultTable';
 import SourceSelect from './Sources';
 import Footer from './Footer';
 import { withSource, COLUMNS } from './generic';
 
-// TODO: refactor
+// TODO: refactor - start w/ getting generic imports out this file
 class App extends Component {
   constructor(props) {
     super(props);
