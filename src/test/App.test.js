@@ -7,7 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 import App from '../components/App';
-import ResultTable from '../components/ResultTable';
+import ResultTable from '../components/ResultTable/Table';
 import Search from '../components/Search';
 import { Button } from '../components/generic';
 
