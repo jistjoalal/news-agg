@@ -5,7 +5,8 @@ import '../styles/App.scss';
 import Search from './Search';
 import ResultTable from './ResultTable';
 import SourceSelect from './Sources';
-import { Button, ButtonWithLoading, withSource, COLUMNS } from './generic';
+import Footer from './Footer';
+import { withSource, COLUMNS } from './generic';
 
 // TODO: refactor
 class App extends Component {
@@ -37,8 +38,7 @@ class App extends Component {
       this.setState({ needFetch: false });
     }
   }
-  
-  // TODO: "back to top" button
+
   render() {
     const { searchTerm, results, searchKey, error, isLoading,
       isSortReverse, source }  = this.state;
@@ -49,34 +49,15 @@ class App extends Component {
       <div className="page" id="top">
         <div className="interactions">
           <SourceSelect source={source} onChange={this.onSourceChange} />
-          <Search
-            value={searchTerm}
-            onChange={this.onSearchChange}
-            onSubmit={this.onSearchSubmit}
-            onFocus={this.onFocus}
-          >
-            Search
-          </Search>
-          <ResultTable
-            list={list}
-            onDismiss={this.onDismiss}
-            isSortReverse={isSortReverse}
-            error={error}
-            source={source}
-          />
-        </div>
-        <div className="interactions footer">
-          <ButtonWithLoading
-            className="button-clickable"
-            isLoading={isLoading}
-            onClick={() => this.fetchMoreStories(searchKey)}
-          >More
-          </ButtonWithLoading>
-          <a href="#top" className="backtotop">
-            <Button className="button-clickable" onClick={() => true}>
-                Back to top
-            </Button>
-          </a>
+
+          <Search value={searchTerm} onChange={this.onSearchChange}
+            onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
+
+          <ResultTable list={list} onDismiss={this.onDismiss}
+            isSortReverse={isSortReverse} error={error} source={source} />
+
+          <Footer isLoading={isLoading} searchKey={searchKey} 
+            fetchMore={this.fetchMoreStories} />
         </div>
       </div>
     );

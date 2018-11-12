@@ -3,6 +3,7 @@
 exports[`App has a valid snapshot 1`] = `
 <div
   className="page"
+  id="top"
 >
   <div
     className="interactions"
@@ -135,21 +136,29 @@ exports[`App has a valid snapshot 1`] = `
         </span>
       </div>
     </div>
-  </div>
-  <div
-    className="interactions"
-  >
-    <i
-      className="fa fa-spinner fa-spin fa-3x"
-    />
+    <div
+      className="footer"
+    >
+      <i
+        className="fa fa-spinner fa-spin fa-3x"
+      />
+      <a
+        className="backtotop"
+        href="#top"
+      >
+        <button
+          className="button-clickable"
+        >
+          Back to top
+        </button>
+      </a>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Button has a valid snapshot 1`] = `
-<button
-  className=""
->
+<button>
   Button
 </button>
 `;
