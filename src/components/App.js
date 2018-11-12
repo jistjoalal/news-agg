@@ -36,11 +36,12 @@ class App extends Component {
     }
   }
   
+  // TODO: "back to top" button
   render() {
     const { searchTerm, results, searchKey, error, isLoading,
       isSortReverse, source }  = this.state;
-    const list = (results && results[source] && results[source][searchKey]
-      && results[source][searchKey].hits) || [];
+    const isSaved = this.resultsSaved(results, source, searchKey);
+    const list = isSaved ? isSaved.hits : [];
     
     return (
       <div className="page">
@@ -86,17 +87,18 @@ class App extends Component {
 
   fetchMoreStories = searchTerm => {
     const { source, results } = this.state;
+    const isSaved= this.resultsSaved(results, source, searchTerm);
     if (source === 'HN') {
-      const page = (results && results[searchTerm]
-        && results[searchTerm].page) || 0;
+      const page = isSaved ? isSaved.page : 0;
       this.fetchStories(searchTerm, page + 1);
     }
     else if (source === 'Reddit') {
-      // TODO: reddit more stories
+      const after = isSaved ? isSaved.page : 0;
+      this.fetchStories(searchTerm, after);
     }
   }
 
-  // makes request to HN API
+  // makes request to API
   fetchStories = (searchTerm, page = 0) => {
     this.setState({ isLoading: true, error: null });
     axios(withSource(this.state.source)(searchTerm, page))
@@ -171,11 +173,15 @@ class App extends Component {
     return true;
   }
 
+  resultsSaved = (results, source, searchKey) => {
+    return results && results[source] && results[source][searchKey];
+  }
+
   // appends additional hits from 'more' button to page
   updateSearchTopStories = (hits, page) => prevState => {
     const { searchKey, results, source } = prevState;
-    const oldHits = results && results[searchKey]
-      ? results[searchKey].hits : [];
+    const oldHits = this.resultsSaved(results, source, searchKey)
+      ? results[source][searchKey].hits : [];
     const updatedHits = [...oldHits, ...hits];
     return {
       results: {

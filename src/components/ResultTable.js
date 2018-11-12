@@ -23,6 +23,7 @@ class Table extends Component {
     this.setState({ sortKey, isSortReverse: newISR });
   }
 
+  // TODO: fix comments link for all sources
   render() {
     const { list, onDismiss, source } = this.props;
     const { sortKey, isSortReverse } = this.state;
