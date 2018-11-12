@@ -6,7 +6,7 @@ import { Button, ButtonWithLoading, withSource } from './generic';
 import Search from './Search';
 import ResultTable from './ResultTable';
 
-const DEFAULT_QUERY = 'redux';
+//TODO: move to github to link w/ wakatime
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       results: null,
       searchKey: '',
-      searchTerm: DEFAULT_QUERY,
+      searchTerm: 'react',
       error: null,
       isLoading: false,
       source: 'HN',
@@ -87,7 +87,7 @@ class App extends Component {
       this.fetchStories(searchTerm, page + 1);
     }
     else if (source === 'Reddit') {
-      //
+      // TODO: reddit more stories
     }
   }
 
@@ -141,7 +141,7 @@ class App extends Component {
   }
 
   // remove hit from result list
-  // TODO: get working for reddit
+  // TODO: reddit onDismiss
   onDismiss = id => {
     this.setState(prevState => {
       const { searchKey, results, source } = prevState;

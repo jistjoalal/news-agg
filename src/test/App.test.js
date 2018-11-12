@@ -66,6 +66,7 @@ describe('ResultTable', () => {
     ],
     sortKey: 'TITLE',
     isSortReverse: false,
+    source: 'HN',
   };
 
   it('renders without crashing', () => {
