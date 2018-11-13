@@ -11,7 +11,7 @@ const Button = ({ children, ...rest }) =>
   </button>
 
 const buttonStyles = active =>
-  classNames('Button inline', {'Button active': active})
+  classNames('Button inline', {'active': active})
 
 // direction: true = up
 const Arrow = ({ direction }) =>
@@ -48,10 +48,12 @@ export { Button, Arrow, withLoading, withError, withNull, SortArrow,
 /* Table UI */
 //
 
+// layout:
+// lg md sm sm sm
 const COLUMN_SIZES = {
-  lg: {width: '60%'},
-  md: {width: '30%'},
-  sm: {width: '10%'}
+  lg: {width: '44%'},
+  md: {width: '20%'},
+  sm: {width: '12%'}
 }
 const COLUMN_HEADERS = {
   Title: COLUMN_SIZES.lg,
