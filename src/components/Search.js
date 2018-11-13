@@ -2,14 +2,14 @@ import React from 'react';
 
 // a search bar
 const Search = ({ value, onChange, onSubmit, onFocus }) => 
-  <form className="search" onSubmit={onSubmit}>
+  <form className="Search" onSubmit={onSubmit}>
     <input
       type="text"
       value={value}
       onChange={onChange}
       onFocus={onFocus}
     />
-    <button className="button-clickable" type="submit">
+    <button className="Button clickable" type="submit">
       Search
     </button>
   </form>

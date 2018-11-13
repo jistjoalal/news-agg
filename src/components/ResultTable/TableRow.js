@@ -4,12 +4,16 @@ import { Button, COLUMN_SIZES, DateString, commentsURL,
   itemBySource } from '../generic';
 
 // Row of fetched results w/ dismiss button
-const TableRow = ({ item, onDismiss, source }) => {
-  const { URL, TITLE, DATE, ID, COMMENTS,
-    POINTS } = itemBySource(source, item);
+const TableRow = ({ onDismiss, ...rest }) => {
+  
+  // get column size + data
   const {lg, md, sm} = COLUMN_SIZES;
+  const { URL, TITLE, DATE, ID, COMMENTS,
+    POINTS } = itemBySource({...rest}),
+    COMMENTS_URL = commentsURL({...rest});
+
   return (
-    <div key={ID} className="table-row">
+    <div key={ID} className="TableRow">
       <span style={lg}>
         <a href={URL}>{TITLE}</a>
       </span>
@@ -19,7 +23,7 @@ const TableRow = ({ item, onDismiss, source }) => {
       </span>
 
       <span style={sm}>
-        <a href={commentsURL(item, source)}>{COMMENTS}</a>
+        <a href={COMMENTS_URL}>{COMMENTS}</a>
       </span>
 
       <span style={sm}>
@@ -27,7 +31,7 @@ const TableRow = ({ item, onDismiss, source }) => {
       </span>
 
       <span style={sm}>
-        <Button onClick={() => onDismiss(ID)} className="button-inline">
+        <Button onClick={() => onDismiss(ID)} className="Button inline">
           Dismiss
         </Button>
       </span>

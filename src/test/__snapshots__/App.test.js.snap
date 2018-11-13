@@ -2,161 +2,155 @@
 
 exports[`App has a valid snapshot 1`] = `
 <div
-  className="page"
+  className="App"
   id="top"
 >
   <div
-    className="interactions"
+    className="SourceSelect"
   >
-    <div
-      className="SourceSelect"
-    >
-      <span
-        className="SourceSelect-radio"
-      >
-        <input
-          checked={true}
-          className="SourceSelect-radio"
-          onChange={[Function]}
-          type="radio"
-          value="HN"
-        />
-        HN
-      </span>
-      <span
-        className="SourceSelect-radio"
-      >
-        <input
-          checked={false}
-          className="SourceSelect-radio"
-          onChange={[Function]}
-          type="radio"
-          value="Reddit"
-        />
-        Reddit
-      </span>
-    </div>
-    <form
-      className="search"
-      onSubmit={[Function]}
+    <span
+      className="SourceSelect-radio"
     >
       <input
+        checked={true}
         onChange={[Function]}
-        onFocus={[Function]}
-        type="text"
-        value="react"
+        type="radio"
+        value="HN"
       />
-      <button
-        className="button-clickable"
-        type="submit"
-      >
-        Search
-      </button>
-    </form>
+      HN
+    </span>
+    <span
+      className="SourceSelect-radio"
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value="Reddit"
+      />
+      Reddit
+    </span>
+  </div>
+  <form
+    className="Search"
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="text"
+      value="react"
+    />
+    <button
+      className="Button clickable"
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+  <div
+    className="ResultTable"
+  >
     <div
-      className="interactions"
+      className="Table"
     >
       <div
-        className="table"
+        className="TableHeaderRow"
       >
-        <div
-          className="table-header"
-        >
-          <span
-            className="Header"
-            style={
-              Object {
-                "width": "60%",
-              }
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "60%",
             }
-          >
-            <button
-              className="button-inline"
-              onClick={[Function]}
-            >
-              Title
-               
-            </button>
-          </span>
-          <span
-            className="Header"
-            style={
-              Object {
-                "width": "30%",
-              }
-            }
-          >
-            <button
-              className="button-inline"
-              onClick={[Function]}
-            >
-              Date
-               
-            </button>
-          </span>
-          <span
-            className="Header"
-            style={
-              Object {
-                "width": "10%",
-              }
-            }
-          >
-            <button
-              className="button-inline"
-              onClick={[Function]}
-            >
-              Comments
-               
-            </button>
-          </span>
-          <span
-            className="Header"
-            style={
-              Object {
-                "width": "10%",
-              }
-            }
-          >
-            <button
-              className="button-inline"
-              onClick={[Function]}
-            >
-              Points
-               
-            </button>
-          </span>
-          <span
-            className="Header"
-            style={
-              Object {
-                "width": "10%",
-              }
-            }
-          >
-            <i
-              className="fa fa-trash"
-            />
-          </span>
-        </div>
-      </div>
-      <div
-        className="footer"
-      >
-        <i
-          className="fa fa-spinner fa-spin fa-3x"
-        />
-        <a
-          className="backtotop"
-          href="#top"
+          }
         >
           <button
-            className="button-clickable"
+            className="Button inline"
+            onClick={[Function]}
           >
-            Back to top
+            Title
+             
           </button>
-        </a>
+        </span>
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "30%",
+            }
+          }
+        >
+          <button
+            className="Button inline"
+            onClick={[Function]}
+          >
+            Date
+             
+          </button>
+        </span>
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "10%",
+            }
+          }
+        >
+          <button
+            className="Button inline"
+            onClick={[Function]}
+          >
+            Comments
+             
+          </button>
+        </span>
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "10%",
+            }
+          }
+        >
+          <button
+            className="Button inline"
+            onClick={[Function]}
+          >
+            Points
+             
+          </button>
+        </span>
+        <span
+          className="Header"
+          style={
+            Object {
+              "width": "10%",
+            }
+          }
+        >
+          <i
+            className="fa fa-trash"
+          />
+        </span>
       </div>
+    </div>
+    <div
+      className="Footer"
+    >
+      <i
+        className="fa fa-spinner fa-spin fa-3x"
+      />
+      <a
+        className="backtotop"
+        href="#top"
+      >
+        <button
+          className="Button clickable"
+        >
+          Back to top
+        </button>
+      </a>
     </div>
   </div>
 </div>
@@ -170,220 +164,121 @@ exports[`Button has a valid snapshot 1`] = `
 
 exports[`ResultTable has a valid snapshot 1`] = `
 <div
-  className="table"
+  className="ResultTable"
 >
   <div
-    className="table-header"
+    className="Table"
   >
-    <span
-      className="Header"
-      style={
-        Object {
-          "width": "60%",
-        }
-      }
+    <div
+      className="TableHeaderRow"
     >
-      <button
-        className="button-inline"
-        onClick={[Function]}
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "60%",
+          }
+        }
       >
-        Title
-         
-      </button>
-    </span>
-    <span
-      className="Header"
-      style={
-        Object {
-          "width": "30%",
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Title
+           
+        </button>
+      </span>
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "30%",
+          }
         }
-      }
-    >
-      <button
-        className="button-inline"
-        onClick={[Function]}
       >
-        Date
-         
-      </button>
-    </span>
-    <span
-      className="Header"
-      style={
-        Object {
-          "width": "10%",
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Date
+           
+        </button>
+      </span>
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "10%",
+          }
         }
-      }
-    >
-      <button
-        className="button-inline"
-        onClick={[Function]}
       >
-        Comments
-         
-      </button>
-    </span>
-    <span
-      className="Header"
-      style={
-        Object {
-          "width": "10%",
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Comments
+           
+        </button>
+      </span>
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "10%",
+          }
         }
-      }
-    >
-      <button
-        className="button-inline"
-        onClick={[Function]}
       >
-        Points
-         
-      </button>
-    </span>
-    <span
-      className="Header"
-      style={
-        Object {
-          "width": "10%",
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Points
+           
+        </button>
+      </span>
+      <span
+        className="Header"
+        style={
+          Object {
+            "width": "10%",
+          }
         }
-      }
-    >
-      <i
-        className="fa fa-trash"
-      />
-    </span>
+      >
+        <i
+          className="fa fa-trash"
+        />
+      </span>
+    </div>
   </div>
   <div
-    className="table-row"
+    className="Footer"
   >
-    <span
-      style={
-        Object {
-          "width": "60%",
-        }
-      }
-    >
-      <a>
-        1
-      </a>
-    </span>
-    <span
-      style={
-        Object {
-          "width": "30%",
-        }
-      }
-    >
-      Invalid Date
-    </span>
-    <span
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-    >
-      <a
-        href="https://news.ycombinator.com/item?id=y"
-      >
-        1
-      </a>
-    </span>
-    <span
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-    >
-      2
-    </span>
-    <span
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
+    <i
+      className="fa fa-spinner fa-spin fa-3x"
+    />
+    <a
+      className="backtotop"
+      href="#top"
     >
       <button
-        className="button-inline"
-        onClick={[Function]}
+        className="Button clickable"
       >
-        Dismiss
+        Back to top
       </button>
-    </span>
-  </div>
-  <div
-    className="table-row"
-  >
-    <span
-      style={
-        Object {
-          "width": "60%",
-        }
-      }
-    >
-      <a>
-        2
-      </a>
-    </span>
-    <span
-      style={
-        Object {
-          "width": "30%",
-        }
-      }
-    >
-      Invalid Date
-    </span>
-    <span
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-    >
-      <a
-        href="https://news.ycombinator.com/item?id=x"
-      >
-        1
-      </a>
-    </span>
-    <span
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-    >
-      2
-    </span>
-    <span
-      style={
-        Object {
-          "width": "10%",
-        }
-      }
-    >
-      <button
-        className="button-inline"
-        onClick={[Function]}
-      >
-        Dismiss
-      </button>
-    </span>
+    </a>
   </div>
 </div>
 `;
 
 exports[`Search has a valid snapshot 1`] = `
 <form
-  className="search"
+  className="Search"
 >
   <input
     type="text"
   />
   <button
-    className="button-clickable"
+    className="Button clickable"
     type="submit"
   >
     Search

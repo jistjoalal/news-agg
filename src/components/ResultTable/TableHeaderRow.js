@@ -5,7 +5,7 @@ import { COLUMN_HEADERS, COLUMN_SIZES, SortArrow, Button,
 
 // row of Headers
 const HeaderRow = ({ onSort, sortKey, direction }) => 
-  <div className="table-header">
+  <div className="TableHeaderRow">
 
     {/* Header for each column */}
     {Object.entries(COLUMN_HEADERS).map(c => {
@@ -26,7 +26,7 @@ const HeaderRow = ({ onSort, sortKey, direction }) =>
 // Header for columns and sorting
 const Header = ({ active, onClick, name, direction, size }) => {
   return (
-    <span style={size} className="Header">
+    <span style={size} className="TableHeader">
       <Button onClick={onClick} className={buttonStyles(active)}>
         {name} <SortArrow show={active} direction={direction} />
       </Button>

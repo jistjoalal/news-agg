@@ -6,7 +6,7 @@ import Table from './Table';
 import Footer from './Footer';
 
 //TODO: seperate out API specific stuff
-class Results extends Component {
+class ResultTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +48,7 @@ class Results extends Component {
     const isSaved = this.resultsSaved(results, source, searchKey);
     const list = isSaved ? isSaved.hits : [];
     return (
-      <div className="interactions">
+      <div className="ResultTable">
         <Table list={list} onDismiss={this.onDismiss}
           isSortReverse={isSortReverse} error={error} source={source} />
 
@@ -99,23 +99,26 @@ class Results extends Component {
 
     // make request
     axios(withSource(source)(searchKey, page))
-      .then(result => this.interpretResponse(result.data))
+      .then(res => this.onResponse(res))
       .catch(error => this.setState({ error, isLoading: false }))
   }
   
   // interprets response according to source API
-  interpretResponse = response => {
+  onResponse = ({ data }) => {
     if (this.state.lastSource === 'HN') {
-      const { hits, page } = response;
-      this.cacheResults(hits, page);
+      // caching originally wrote for HN
+      this.cacheResults(data);
     }
     else if (this.state.lastSource === 'Reddit') {
-      // reddit data one level deeper than HN
-      const children = response.data.children.map(c => c.data);
-      // uses ID to next post instead of page,
-      // works the same though, just plug into url
-      const after = response.data.after;
-      this.cacheResults(children, after);
+      // -data: one level deeper than HN
+      // -hits: one level deeper than HN hits
+      // -page: uses ID pointer to next post instead of page,
+      //   works the same though, just plug into url
+      const { children, after } = data.data;
+      this.cacheResults({
+        hits: children.map(c => c.data),
+        page: after
+      });
     }
     // no idea how this could happen
     else {
@@ -124,7 +127,7 @@ class Results extends Component {
   }
 
   // caches fetched results
-  cacheResults = (hits, page) => {
+  cacheResults = ({ hits, page }) => {
       this.setState(({ results, lastSource, lastSearchKey }) => {
       // catch null results (cant spread null):
       //   null results[source] = {}
@@ -169,4 +172,4 @@ class Results extends Component {
   })
 }
 
-export default Results;
+export default ResultTable;

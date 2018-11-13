@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 import App from '../components/App';
-import ResultTable from '../components/ResultTable/Table';
+import ResultTable from '../components/ResultTable';
 import Search from '../components/Search';
 import { Button } from '../components/generic';
 

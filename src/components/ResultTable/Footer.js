@@ -4,14 +4,14 @@ import { Button, ButtonWithLoading } from '../generic';
 
 // [More] [Go to top]
 const Footer = ({ isLoading, fetchMore }) =>
-  <div className="footer">
-    <ButtonWithLoading className="button-clickable"
+  <div className="Footer">
+    <ButtonWithLoading className="Button clickable"
       isLoading={isLoading} onClick={fetchMore}
     >More
     </ButtonWithLoading>
     
     <a href="#top" className="backtotop">
-      <Button className="button-clickable">
+      <Button className="Button clickable">
         Back to top
       </Button>
     </a>

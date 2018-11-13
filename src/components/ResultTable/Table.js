@@ -17,7 +17,6 @@ class Table extends Component {
 
   // sort table by this key
   onSort = sortKey => {
-    console.log(sortKey)
     this.selectSort(sortKey);
     this.setState({ sortKey });
   }
@@ -37,7 +36,7 @@ class Table extends Component {
     // toggle reverse
     const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
     return (
-      <div className="table">
+      <div className="Table">
         <TableHeaderRow onSort={this.onSort}
           sortKey={sortKey} direction={isSortReverse} />
         {toggleSortedList.map((item, i) =>

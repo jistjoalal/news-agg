@@ -11,7 +11,7 @@ const Button = ({ children, ...rest }) =>
   </button>
 
 const buttonStyles = active =>
-  classNames('button-inline', {'button-active': active})
+  classNames('Button inline', {'Button active': active})
 
 // direction: true = up
 const Arrow = ({ direction }) =>
@@ -66,6 +66,8 @@ export { COLUMN_SIZES, COLUMN_HEADERS };
 /* API stuff */
 //
 
+const SOURCES = ['HN', 'Reddit'];
+
 // returns search API url from HOF that takes API args
 const withSource = source => {
   switch (source) {
@@ -97,7 +99,7 @@ const commentsURL = (item, source) => {
 //   ...
 // }
 // -used to output results in table
-const itemBySource = (source, item) => {
+const itemBySource = ({ source, item }) => {
   let result = {};
   Object.entries(COLUMNS[source]).forEach(c => {
     result[c[0]] = item[c[1]];
@@ -125,4 +127,5 @@ const COLUMNS = {
   }
 };
 
-export { withSource, itemBySource, DateString, commentsURL, COLUMNS };
+export { withSource, itemBySource, DateString, commentsURL, COLUMNS,
+  SOURCES };

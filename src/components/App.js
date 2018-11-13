@@ -4,10 +4,8 @@ import '../styles/App.scss';
 
 import Search from './Search';
 import SourceSelect from './SourceSelect';
-import Results from './ResultTable/Results';
+import ResultTable from './ResultTable';
 
-//TODO: look for func parameters that aren't ({})
-//TODO: rename functions
 //TODO: graphql?
 class App extends Component {
   constructor(props) {
@@ -22,15 +20,13 @@ class App extends Component {
   render() {
     const { searchTerm, searchKey, source }  = this.state;
     return (
-      <div className="page" id="top">
-        <div className="interactions">
-          <SourceSelect source={source} onChange={this.onSourceChange} />
+      <div className="App" id="top">
+        <SourceSelect source={source} onChange={this.onSourceChange} />
 
-          <Search value={searchTerm} onChange={this.onSearchChange}
-            onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
+        <Search value={searchTerm} onChange={this.onSearchChange}
+          onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
 
-          <Results source={source} searchKey={searchKey} />
-        </div>
+        <ResultTable source={source} searchKey={searchKey} />
       </div>
     );
   }
