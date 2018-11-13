@@ -5,8 +5,6 @@ import { COLUMNS, withSource } from '../generic';
 import Table from './Table';
 import Footer from './Footer';
 
-//TODO: comments
-
 class Results extends Component {
   constructor(props) {
     super(props);

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { COLUMN_HEADERS, SortArrow, Button, buttonStyles } from '../generic';
+import { COLUMN_HEADERS, COLUMN_SIZES, SortArrow, Button,
+  buttonStyles } from '../generic';
 
 // row of Headers
 const HeaderRow = ({ onSort, sortKey, isSortReverse }) => 
@@ -11,8 +12,10 @@ const HeaderRow = ({ onSort, sortKey, isSortReverse }) =>
         <Header key={name} sortKey={name} onSort={onSort} activeSortKey={sortKey}
           isSortReverse={isSortReverse} size={size} name={name} />
       );
-    }
-    )}
+    })}
+    <span style={COLUMN_SIZES.sm} className="Header">
+      <i className="fa fa-trash"></i>
+    </span>
   </div>
 
 // Header for columns and sorting stories

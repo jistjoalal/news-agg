@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, COLUMN_SIZES, DateString, commentsURL,
   itemBySource } from '../generic';
 
+// Row of fetched results w/ dismiss button
 const TableRow = ({ item, onDismiss, source }) => {
   const { URL, TITLE, DATE, ID, COMMENTS,
     POINTS } = itemBySource(source, item);
