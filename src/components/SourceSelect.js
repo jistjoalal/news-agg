@@ -9,6 +9,8 @@ const SourceSelect = ({ source, onChange }) => {
       {/* radio button for each source */}
       {SOURCES.map(s =>
         <label key={s}
+          // prevent click-drag highlight b/c its annoying
+          onMouseDown={e => e.preventDefault()}
           className={`SourceSelectRadio${source === s ? ' active' : ''}`}
         >
           <input type="radio" value={s}
