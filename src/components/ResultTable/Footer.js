@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button, ButtonWithLoading } from '../generic';
 
+// [More] [Go to top]
 const Footer = ({ isLoading, source, searchKey, fetchMore }) =>
   <div className="footer">
     <ButtonWithLoading

@@ -5,34 +5,47 @@ import { COLUMNS, withSource } from '../generic';
 import Table from './Table';
 import Footer from './Footer';
 
+//TODO: comments
+
 class Results extends Component {
   constructor(props) {
     super(props);
     this.state = {
       results: null,
-      isLoading: false,
       isSortReverse: false,
+      isLoading: false,
       error: null,
-      sourceKey: null,
+      lastSource: null,
+      lastSearchKey: null,
     }
   }
 
+  // initial fetch
+  componentDidMount() {
+    const { source, searchKey } = this.state;
+    this.fetchStories(source, searchKey);
+  }
+
+  // need to fetch results?
   componentDidUpdate() {
-    const { sourceKey, results } = this.state;
+    const { lastSource, lastSearchKey, results } = this.state;
     const { source, searchKey } = this.props;
-    // change of source
-    if (sourceKey !== source) {
+
+    // change of source or searchKey
+    if (lastSource !== source || searchKey !== lastSearchKey) {
       // results not yet cached
       if (!this.resultsSaved(results, source, searchKey)) {
         this.fetchStories(source, searchKey);
       }
-      this.setState({ sourceKey: source });
+      this.setState({ lastSource: source, lastSearchKey: searchKey });
     }
   }
 
   render() {
     const { results, isLoading, isSortReverse, error } = this.state;
     const { source, searchKey } = this.props;
+
+    // list = saved results or empty list
     const isSaved = this.resultsSaved(results, source, searchKey);
     const list = isSaved ? isSaved.hits : [];
     return (
@@ -46,10 +59,25 @@ class Results extends Component {
     );
   }
 
+  // results[source][searchKey] cached?
+  resultsSaved = () => {
+    const { results } = this.state;
+    const { source, searchKey } = this.props;
+    return results && results[source] && results[source][searchKey];
+  }
+
+  // the more button in footer fetches another page of stories
   fetchMoreStories = (source, searchKey) => {
     const { results } = this.state;
+
+    // page = current page or 0
     const isSaved = this.resultsSaved(results, source, searchKey);
     const page = isSaved ? isSaved.page : 0;
+
+    // grab another page of stories from source
+    // HN uses page numbers
+    // Reddit uses ID pointers
+    // both are saved in results[source][searchKey].page
     if (source === 'HN') {
       this.fetchStories(source, searchKey, page + 1);
     }
@@ -60,41 +88,55 @@ class Results extends Component {
 
   // makes request to API
   fetchStories = (source, searchKey, page = 0) => {
-    console.log('fetching')
     this.setState({ isLoading: true, error: null });
     axios(withSource(source)(searchKey, page))
-      .then(result => this.setSearchTopStories(result.data))
+      .then(result => this.interpretResponse(result.data))
       .catch(error => this.setState({ error, isLoading: false }))
   }
   
-  // stores response in state.results, appending to existing hits
-  setSearchTopStories = response => {
+  // interprets response according to source API
+  interpretResponse = response => {
     if (this.props.source === 'HN') {
       const { hits, page } = response;
-      this.setState(this.updateSearchTopStories(hits, page));
+      this.setState(this.cacheResults(hits, page));
     }
     else if (this.props.source === 'Reddit') {
+      // reddit data one level deeper than HN
       const children = response.data.children.map(c => c.data);
+      // uses ID to next post instead of page,
+      // works the same though, just plug into url
       const after = response.data.after;
-      this.setState(this.updateSearchTopStories(children, after));
+      this.setState(this.cacheResults(children, after));
     }
+    // no idea how this could happen
     else {
-      // no source
+      this.setState({ error: 'Something went wrong.'});
     }
   }
 
-  // appends additional hits from 'more' button to page
-  updateSearchTopStories = (hits, page) => prevState => {
+  // caches fetched results
+  cacheResults = (hits, page) => prevState => {
     const { results } = prevState;
     const { source, searchKey } = this.props;
-    const oldHits = this.resultsSaved(results, source, searchKey)
-      ? results[source][searchKey].hits : [];
-    const updatedHits = [...oldHits, ...hits];
+
+    // catch null results:
+    //   null results[source] = {}
+    //   null results[source][searchKey] = []
+    const isSaved = this.resultsSaved(results, source, searchKey);
+    const sourceResults = isSaved ? {...results}[source] : {};
+    const oldHits = isSaved ? results[source][searchKey].hits : [];
+
     return {
-      results: {
-        ...results,
-        [source]: { 
-          [searchKey]: { hits: updatedHits, page }
+      // keep old results
+      results: { ...results,
+        // keep old results[source]
+        [source]: { ...sourceResults,
+          // keep old results[source][searchKey]
+          [searchKey]: { 
+            // append new hits + page
+            hits: [...oldHits, ...hits],
+            page
+          }
         }
       },
       isLoading: false
@@ -107,21 +149,17 @@ class Results extends Component {
       const { results } = prevState;
       const { source, searchKey } = this.props;
       const { hits, page } = results[source][searchKey];
-      const ID_COL = COLUMNS[source].ID;
-      const updatedHits = hits.filter(item => item[ID_COL] !== id);
+
+      // filter out this table row from results
+      const updatedHits = hits.filter(item => item[COLUMNS[source].ID] !== id);
       return {
-        results: {
-          [source]: {
-            ...results,
+        results: { ...results,
+          [source]: { ...results[source],
             [searchKey]: { hits: updatedHits, page }
           }
         }
       };
     });
-  }
-
-  resultsSaved = (results, source, searchKey) => {
-    return results && results[source] && results[source][searchKey];
   }
 }
 
