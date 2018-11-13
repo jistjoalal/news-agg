@@ -2,6 +2,9 @@
 //TODO: color theme
 //TODO: media queries
 
+$green: #00C000;
+$green-dark: #009000;
+
 /**
  *  App component styles
  */
@@ -13,6 +16,14 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
+    input[type="text"] {
+      color: $green;
+
+      &:focus {
+        background: #151515;
+      }
+    }
   }
   
   .SourceSelect {
@@ -34,8 +45,7 @@
       }
 
       &.active {
-        color: green;
-        text-decoration: underline;
+        color: $green-dark;
       }
     }
   }
@@ -63,19 +73,21 @@
 
         .TableHeader {
           display: flex;
-          flex-direction: column;
+          justify-content: center;
           font-size: 1.33em;
+          text-shadow: 0 0 1px rgba(0,100,0,0.3);
 
-          &.active {
-            .Button {
-              text-decoration: underline;
-              font-weight: bold;
-              color: green;
-              text-shadow: 0 0 1px rgba(0,0,0,0.3);
-          
-              i[class*="fa-arrow-"] {
-                margin-left: 5px;
-                position: absolute;
+          .SortArrow {
+
+            i[class*="fa-sort-"] {
+              margin-top: 1px;
+              color: rgba(0,0,0,0.3);
+              position: absolute;
+              margin-left: 0.33em;
+
+              &.active {
+                color: green;
+                text-shadow: 0 0 2px black;
               }
             }
           }
@@ -112,25 +124,27 @@
     -webkit-font-smoothing: inherit;
     padding: 0;
     font-size: inherit;
+    text-shadow: inherit;
   }
 
   &.clickable {
     border: none;
     padding: 10px;
-    background: #939291;
-    border: 1px solid #000;
+    background: #222;
+    color: #00e000;
+    border: 1px solid white;
     border-radius: 5px;
 
     &:hover {
       border-width: 2px;
       padding: 9px;
-      background: #bbb;
+      background: #151515;
     }
     
     &:active {
       border-width: 3px;
       padding: 8px;
-      background: #ddd;
+      background: #111;
     }
   }
 }

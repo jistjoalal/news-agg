@@ -11,7 +11,7 @@ class Table extends Component {
     super(props);
     this.state = {
       sortKey: 'Points',
-      isSortReverse: false,
+      isSortReverse: true,
     };
   }
 

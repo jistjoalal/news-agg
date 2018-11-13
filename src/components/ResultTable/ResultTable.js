@@ -6,6 +6,7 @@ import Table from './Table';
 import Footer from './Footer';
 
 //TODO: seperate out API specific stuff
+//TODO: delete all by clicking trash
 class ResultTable extends Component {
   constructor(props) {
     super(props);

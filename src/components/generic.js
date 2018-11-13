@@ -5,6 +5,18 @@ import classNames from 'classnames';
 /* general UI stuff */
 //
 
+const withLoading = Component => ({ isLoading, ...rest }) =>
+isLoading ?
+  <i className="fa fa-spinner fa-spin fa-3x"></i>
+: <Component { ...rest } />
+
+const withError = Component => ({ error, ...rest }) =>
+error ?
+  <div className="interactions">
+    <p>Something went wrong.</p>
+  </div>
+: <Component { ...rest } />
+
 const Button = ({ children, ...rest }) => 
   <button { ...rest }>
     {children}
@@ -14,34 +26,36 @@ const buttonStyles = active =>
   classNames('Button inline', {'active': active})
 
 // direction: true = up
-const Arrow = ({ direction }) =>
-  <i className={`fa fa-arrow-${direction ? 'up' : 'down'}`}></i>
+const SortArrow = ({ show, direction }) => {
 
-const withLoading = Component => ({ isLoading, ...rest }) =>
-  isLoading ?
-    <i className="fa fa-spinner fa-spin fa-3x"></i>
-  : <Component { ...rest } />
+  const isUp = show && direction;
+  const isDown = show && !direction;
+  return (
+    <span className="SortArrow">
+      <Arrow show={isUp} direction={true} />
+      <Arrow show={isDown} direction={false} />
+    </span>
+  )
+}
 
-const withError = Component => ({ error, ...rest }) =>
-  error ?
-    <div className="interactions">
-      <p>Something went wrong.</p>
-    </div>
-  : <Component { ...rest } />
-
-const withNull = Component => ({ show, ...rest }) =>
-  show ?
-    <Component { ...rest } />
-  : null;
+const Arrow = ({ show, direction }) => {
+  const className = classNames('fa', 
+    {'fa-sort-desc': direction},
+    {'fa-sort-asc': !direction},
+    {'active': show},
+  );
+  return (
+    <i className={className}></i>
+  );
+}
 
 const DateString = ({ DATE }) => {
   return new Date(DATE*1000).toDateString();
 }
 
-const SortArrow = withNull(Arrow);
 const ButtonWithLoading = withLoading(Button);
 
-export { Button, Arrow, withLoading, withError, withNull, SortArrow,
+export { Button, withLoading, withError, SortArrow,
   ButtonWithLoading, buttonStyles };
 
 //
