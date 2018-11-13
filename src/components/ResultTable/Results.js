@@ -5,6 +5,7 @@ import { COLUMNS, withSource } from '../generic';
 import Table from './Table';
 import Footer from './Footer';
 
+//TODO: seperate out API specific stuff
 class Results extends Component {
   constructor(props) {
     super(props);
@@ -20,17 +21,17 @@ class Results extends Component {
 
   // initial fetch
   componentDidMount() {
-    const { source, searchKey } = this.state;
-    this.fetchStories(source, searchKey);
+    this.setState({ lastSource: 'fetch pls' });
   }
 
   // need to fetch results?
   componentDidUpdate() {
-    const { lastSource, lastSearchKey, results } = this.state;
+    const { lastSource, lastSearchKey, results, isLoading } = this.state;
     const { source, searchKey } = this.props;
-
-    // change of source or searchKey
-    if (lastSource !== source || searchKey !== lastSearchKey) {
+    // change of source or searchKey & !already fetching
+    if ((lastSource !== source || searchKey !== lastSearchKey)
+      && !isLoading)
+    {
       // results not yet cached
       if (!this.resultsSaved(results, source, searchKey)) {
         this.fetchStories(source, searchKey);
@@ -51,8 +52,8 @@ class Results extends Component {
         <Table list={list} onDismiss={this.onDismiss}
           isSortReverse={isSortReverse} error={error} source={source} />
 
-        <Footer isLoading={isLoading} searchKey={searchKey} 
-          fetchMore={this.fetchMoreStories} source={source}/>
+        <Footer isLoading={isLoading}
+          fetchMore={() => this.fetchMoreStories()} />
       </div>
     );
   }
@@ -65,8 +66,9 @@ class Results extends Component {
   }
 
   // the more button in footer fetches another page of stories
-  fetchMoreStories = (source, searchKey) => {
+  fetchMoreStories = () => {
     const { results } = this.state;
+    const { source, searchKey } = this.props;
 
     // page = current page or 0
     const isSaved = this.resultsSaved(results, source, searchKey);
@@ -85,8 +87,17 @@ class Results extends Component {
   }
 
   // makes request to API
-  fetchStories = (source, searchKey, page = 0) => {
+  fetchStories = () => {
+    const { results } = this.state;
+    const { source, searchKey } = this.props;
+    
+    // next page or default to 0
+    const page = this.resultsSaved() ? results[source][searchKey].page : 0;
+
+    // loading icon, clear error
     this.setState({ isLoading: true, error: null });
+
+    // make request
     axios(withSource(source)(searchKey, page))
       .then(result => this.interpretResponse(result.data))
       .catch(error => this.setState({ error, isLoading: false }))
@@ -94,17 +105,17 @@ class Results extends Component {
   
   // interprets response according to source API
   interpretResponse = response => {
-    if (this.props.source === 'HN') {
+    if (this.state.lastSource === 'HN') {
       const { hits, page } = response;
-      this.setState(this.cacheResults(hits, page));
+      this.cacheResults(hits, page);
     }
-    else if (this.props.source === 'Reddit') {
+    else if (this.state.lastSource === 'Reddit') {
       // reddit data one level deeper than HN
       const children = response.data.children.map(c => c.data);
       // uses ID to next post instead of page,
       // works the same though, just plug into url
       const after = response.data.after;
-      this.setState(this.cacheResults(children, after));
+      this.cacheResults(children, after);
     }
     // no idea how this could happen
     else {
@@ -113,52 +124,49 @@ class Results extends Component {
   }
 
   // caches fetched results
-  cacheResults = (hits, page) => prevState => {
-    const { results } = prevState;
-    const { source, searchKey } = this.props;
-
-    // catch null results:
-    //   null results[source] = {}
-    //   null results[source][searchKey] = []
-    const isSaved = this.resultsSaved(results, source, searchKey);
-    const sourceResults = isSaved ? {...results}[source] : {};
-    const oldHits = isSaved ? results[source][searchKey].hits : [];
-
-    return {
-      // keep old results
-      results: { ...results,
-        // keep old results[source]
-        [source]: { ...sourceResults,
-          // keep old results[source][searchKey]
-          [searchKey]: { 
-            // append new hits + page
-            hits: [...oldHits, ...hits],
-            page
+  cacheResults = (hits, page) => {
+      this.setState(({ results, lastSource, lastSearchKey }) => {
+      // catch null results (cant spread null):
+      //   null results[source] = {}
+      //   null results[source][searchKey] = {}
+      //   null results[source][searchKey].hits = []
+      const sourceResults = results && results[lastSource] ?
+        {...results}[lastSource] : {};
+      const searchResults = sourceResults && sourceResults[lastSearchKey] ?
+        {...sourceResults}[lastSearchKey] : {};
+      const oldHits = searchResults.hits || [];
+      return {
+        // keep old results (other sources)
+        results: { ...results,
+          // keep old results[source] (other searchKeys)
+          [lastSource]: { ...sourceResults,
+            [lastSearchKey]: {
+              // append new hits + page
+              hits: [...oldHits, ...hits],
+              page
+            }
           }
-        }
-      },
-      isLoading: false
-    }
+        },
+        isLoading: false
+      }
+    })
   }
 
   // remove hit from result list
-  onDismiss = id => {
-    this.setState(prevState => {
-      const { results } = prevState;
-      const { source, searchKey } = this.props;
-      const { hits, page } = results[source][searchKey];
+  onDismiss = id => this.setState(({ results, lastSource, lastSearchKey }) => {
+    const { hits, page } = results[lastSource][lastSearchKey];
 
-      // filter out this table row from results
-      const updatedHits = hits.filter(item => item[COLUMNS[source].ID] !== id);
-      return {
-        results: { ...results,
-          [source]: { ...results[source],
-            [searchKey]: { hits: updatedHits, page }
-          }
+    // filter out this table row from results
+    const updatedHits = hits.filter(item =>
+      item[COLUMNS[lastSource].ID] !== id);
+    return {
+      results: { ...results,
+        [lastSource]: { ...results[lastSource],
+          [lastSearchKey]: { hits: updatedHits, page }
         }
-      };
-    });
-  }
+      }
+    };
+  })
 }
 
 export default Results;

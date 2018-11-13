@@ -6,10 +6,9 @@ import Search from './Search';
 import SourceSelect from './SourceSelect';
 import Results from './ResultTable/Results';
 
-//TODO: look for spots to rest
-//TODO: look for unecessary parameters
 //TODO: look for func parameters that aren't ({})
 //TODO: rename functions
+//TODO: graphql?
 class App extends Component {
   constructor(props) {
     super(props);

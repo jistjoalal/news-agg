@@ -134,13 +134,9 @@ exports[`App has a valid snapshot 1`] = `
               }
             }
           >
-            <button
-              className="button-inline"
-              onClick={[Function]}
-            >
-              Dismiss
-               
-            </button>
+            <i
+              className="fa fa-trash"
+            />
           </span>
         </div>
       </div>
@@ -251,13 +247,9 @@ exports[`ResultTable has a valid snapshot 1`] = `
         }
       }
     >
-      <button
-        className="button-inline"
-        onClick={[Function]}
-      >
-        Dismiss
-         
-      </button>
+      <i
+        className="fa fa-trash"
+      />
     </span>
   </div>
   <div
