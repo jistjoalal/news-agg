@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 import App from '../components/App';
 import ResultTable from '../components/ResultTable';
-import Search from '../components/Search';
+import SearchInput from '../components/Search/SearchInput';
 import { Button } from '../components/generic';
 
 describe('App', () => {
@@ -24,15 +24,15 @@ describe('App', () => {
   });
 });
 
-describe('Search', () => {
+describe('SearchInput', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Search>Search</Search>, div);
+    ReactDOM.render(<SearchInput />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('has a valid snapshot', () => {
-    const component = renderer.create(<Search>Search</Search>);
+    const component = renderer.create(<SearchInput />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

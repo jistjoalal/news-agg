@@ -1,8 +1,8 @@
 import React from 'react';
 
 // a search bar
-const Search = ({ value, onChange, onSubmit, onFocus }) => 
-  <form className="Search" onSubmit={onSubmit}>
+const SearchInput = ({ value, onChange, onSubmit, onFocus }) => 
+  <form className="SearchInput" onSubmit={onSubmit}>
     <input
       type="text"
       value={value}
@@ -11,4 +11,4 @@ const Search = ({ value, onChange, onSubmit, onFocus }) =>
     />
   </form>
 
-export default Search;
+export default SearchInput;

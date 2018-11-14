@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 
 import '../styles/App.scss';
 
-import Search from './Search';
-import SourceSelect from './SourceSelect';
+//TODO: refactor search w/ index.js as it sown component like ResultTable
+//TODO: -then factor out helpers
+import Search from './Search/SearchInput';
+import SourceSelect from './Search/SourceSelect';
+
 import ResultTable from './ResultTable';
 
 class App extends Component {
@@ -20,7 +23,7 @@ class App extends Component {
     const { searchTerm, searchKey, source }  = this.state;
     return (
       <div className="App" id="top">
-        <div className="Menu">
+        <div className="Search">
           <SourceSelect source={source} onChange={this.onSourceChange} />
 
           <Search value={searchTerm} onChange={this.onSearchChange}

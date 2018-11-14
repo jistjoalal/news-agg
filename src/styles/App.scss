@@ -1,6 +1,6 @@
 //TODO: remove redundants
 //TODO: media queries
-//TODO: consolidate general styles
+//TODO: consolidate general styles (a links)
 
 $green: #00A000;
 
@@ -29,9 +29,9 @@ $term-black: #151515;
     }
   }
 
-  .Menu {
+  .Search {
 
-    .Search {
+    .SearchInput {
       display: flex;
       align-items: flex-end;
       justify-content: center;

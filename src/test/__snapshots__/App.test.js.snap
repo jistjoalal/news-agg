@@ -6,7 +6,7 @@ exports[`App has a valid snapshot 1`] = `
   id="top"
 >
   <div
-    className="Menu"
+    className="Search"
   >
     <div
       className="SourceSelect"
@@ -41,7 +41,7 @@ exports[`App has a valid snapshot 1`] = `
       </label>
     </div>
     <form
-      className="Search"
+      className="SearchInput"
       onSubmit={[Function]}
     >
       <input
@@ -598,9 +598,9 @@ exports[`ResultTable has a valid snapshot 1`] = `
 </div>
 `;
 
-exports[`Search has a valid snapshot 1`] = `
+exports[`SearchInput has a valid snapshot 1`] = `
 <form
-  className="Search"
+  className="SearchInput"
 >
   <input
     type="text"
