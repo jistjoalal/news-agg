@@ -1,6 +1,5 @@
-//TODO: remove redundants
+
 //TODO: media queries
-//TODO: consolidate general styles (a links)
 
 $green: #00A000;
 
@@ -67,6 +66,7 @@ $term-black: #151515;
         text-shadow: 0 0 10px black;
         color: $gray;
         cursor: pointer;
+        
         input[type="radio"] {
           display: none;
         }
@@ -87,14 +87,13 @@ $term-black: #151515;
         display: flex;
         line-height: 24px;
         white-space: nowrap;
-        margin: 10px 0;
-        padding: 10px;
+        margin: 15px 0;
+        padding: 5px;
         background: $gray;
         color: $gray-text;
         border: 1px solid $gray-border;
       }
 
-      // TODO: change color of background for visited links instead of text?
       .TableHeaderRow {
         display: flex;
         justify-content: center;
@@ -102,29 +101,13 @@ $term-black: #151515;
         color: $term-black;
 
         .DataHeader {
-          display: flex;
-          justify-content: center;
           font-size: 1.33em;
           text-shadow: 0 0 1px rgba($green, 0.2);
-
-          .SortArrow {
-
-            i[class*="fa-sort-"] {
-              margin-top: 1px;
-              color: $gray-background;
-              position: absolute;
-              margin-left: 0.33em;
-
-              &.active {
-                color: $green;
-                text-shadow: 0 0 1px black;
-              }
-            }
-          }
         }
       }
 
       .TableRow {
+        
         span, a {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -139,10 +122,6 @@ $term-black: #151515;
     .Footer {
       display: flex;
       justify-content: space-around;
-
-      .fa-spinner {
-        color: $green;
-      }
     }
   }
 }
@@ -151,42 +130,48 @@ $term-black: #151515;
  *  generic component styles
  */
 
+ .SortArrow {
+
+  i[class*="fa-sort-"] {
+    margin-top: 1px;
+    color: $gray-background;
+    position: absolute;
+    margin-left: 0.33em;
+
+    &.active {
+      color: $green;
+      text-shadow: 0 0 1px black;
+    }
+  }
+}
+
 .Button {
   cursor: pointer;
   outline: none;
+  border: none;
 
    &.inline {
-    border-width: 0;
     background: transparent;
-    color: inherit;
-    text-align: inherit;
-    -webkit-font-smoothing: inherit;
     padding: 0;
-    font-size: inherit;
-    text-shadow: inherit;
+  }
 
-    &:hover {
-      color: black;
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 
   &.clickable {
-    border: none;
     padding: 10px;
     background: $gray-background;
     color: $gray-border;
     border: 1px solid $gray-border;
     border-radius: 5px;
-
-    &:hover {
-      transition-delay: 50ms;
-      text-shadow: 0 0 3px black;
-    }
     
     &:active {
-      transition-delay: 50ms;
       background: $term-black
     }
   }
+}
+
+.fa-spinner {
+  color: $green;
 }

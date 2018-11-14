@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchKey: 'react',
+      searchKey: '',
       source: 'HN',
     };
   }
@@ -39,10 +39,7 @@ class App extends Component {
   
   // control search input
   onSearchChange = ({ target }) => {
-    console.log(target.value)
-    if (target.value !== '') {
-      this.setState({ searchKey: target.value });
-    }
+    this.setState({ searchKey: target.value });
   }
 
   // clear search input on focus
