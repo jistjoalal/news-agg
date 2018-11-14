@@ -98,6 +98,7 @@ $term-black: #151515;
         display: flex;
         justify-content: center;
         align-items: center;
+        color: $term-black;
 
         .TableHeader {
           display: flex;
@@ -127,6 +128,10 @@ $term-black: #151515;
           overflow: hidden;
           text-overflow: ellipsis;
         }
+
+        .Dismiss {
+          color: $gray-text;
+        }
       }
     }
   
@@ -147,16 +152,22 @@ $term-black: #151515;
 
 .Button {
   cursor: pointer;
+  outline: none;
 
    &.inline {
     border-width: 0;
     background: transparent;
-    color: black;
+    color: inherit;
     text-align: inherit;
     -webkit-font-smoothing: inherit;
     padding: 0;
     font-size: inherit;
     text-shadow: inherit;
+
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
   }
 
   &.clickable {

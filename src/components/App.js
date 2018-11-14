@@ -6,7 +6,6 @@ import Search from './Search';
 import SourceSelect from './SourceSelect';
 import ResultTable from './ResultTable';
 
-//TODO: comments url broken?
 class App extends Component {
   constructor(props) {
     super(props);

@@ -30,7 +30,7 @@ const TableRow = ({ onDismiss, ...rest }) => {
         {POINTS}
       </span>
 
-      <span style={sm}>
+      <span style={sm} className="Dismiss">
         <Button onClick={() => onDismiss(ID)} className="Button inline">
           Dismiss
         </Button>

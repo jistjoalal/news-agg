@@ -116,7 +116,7 @@ const REDDIT_URL = (searchTerm, after) =>
   + `&after=${after}`;
 
 // returns an API specific comments url
-const commentsURL = (item, source) => {
+const commentsURL = ({ item, source }) => {
   switch (source) {
     default: return `https://news.ycombinator.com/item?id=${item.objectID}`
     case 'Reddit':
@@ -159,5 +159,33 @@ const COLUMNS = {
   }
 };
 
+// returns the next page of stories from source
+// - results[source][searchKey].page can contain different
+//   data for each source
+const sourceNextPage = (source, page) => {
+  switch(source) {
+    case 'HN': return page + 1;
+    case 'Reddit': return page;
+    default: return page;
+  }
+}
+
+const unpackResponse = (source, response) => {
+  switch(source) {
+    case 'HN': return response;
+    case 'Reddit':
+      // -data: one level deeper than HN
+      const { children, after } = response.data;
+      return {
+        // -hits: one level deeper than HN hits
+        hits: children.map(c => c.data),
+        // -page: uses ID pointer to next post instead of page,
+        //   works the same though, just plug into url
+        page: after
+      }
+    default: return {};
+  }
+}
+
 export { withSource, itemBySource, DateString, commentsURL, COLUMNS,
-  SOURCES };
+  SOURCES, sourceNextPage, unpackResponse };
