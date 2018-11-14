@@ -1,4 +1,6 @@
+import React from 'react';
 
+import { Button } from '../generic';
 
 // source specific API response columns
 const COLUMNS = {
@@ -34,10 +36,31 @@ const COLUMN_HEADERS = {
   Points: COLUMN_SIZES.sm,
 }
 
-// TODO: return dict of properly formatted results, not just half-ass props
+const TABLE_CELLS = {
+  TSpan: ({ children, ...rest }) =>
+    <span {...rest}>
+      {children}
+    </span>,
+
+  TLink: ({ children, ...rest }) =>
+    <a {...rest}>
+      {children}
+    </a>,
+
+  TButton: ({ children, ...rest }) =>
+    <Button className="Dismiss Button inline" {...rest}>
+      {children}
+    </Button>,
+
+  TDate: ({ children, ...rest }) =>
+    <span {...rest}>
+      {new Date(+children*1000).toDateString()}
+    </span>,
+};
+
 // returns a result object of data columns:
 // {
-//   GENERIC_COLUMN_NAME: specific_api_column_name,
+//   GENERIC_COLUMN_NAME: specific_api_column_data,
 //   ...
 // }
 // -used to output results in table
@@ -46,6 +69,7 @@ const itemBySource = ({ source, item }) => {
   Object.entries(COLUMNS[source]).forEach(c => {
     result[c[0]] = item[c[1]];
   });
+  result.COMMENTS_URL = commentsURL({ source, item })
   return result;
 }
 
@@ -103,5 +127,5 @@ const commentsURL = ({ item, source }) => {
   }
 }
 
-export { COLUMNS, COLUMN_SIZES, COLUMN_HEADERS, itemBySource, withSource,
-  sourceNextPage, unpackResponse, commentsURL };
+export { COLUMNS, COLUMN_SIZES, COLUMN_HEADERS, TABLE_CELLS,
+  itemBySource, withSource, sourceNextPage, unpackResponse, commentsURL };

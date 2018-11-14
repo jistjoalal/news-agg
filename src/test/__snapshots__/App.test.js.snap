@@ -61,110 +61,90 @@ exports[`App has a valid snapshot 1`] = `
       <div
         className="TableHeaderRow"
       >
-        <span
-          className="TableHeader"
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "44%",
             }
           }
         >
-          <button
-            className="Button inline"
-            onClick={[Function]}
+          Title
+          <span
+            className="SortArrow"
           >
-            Title
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
-        <span
-          className="TableHeader"
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "20%",
             }
           }
         >
-          <button
-            className="Button inline"
-            onClick={[Function]}
+          Date
+          <span
+            className="SortArrow"
           >
-            Date
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
-        <span
-          className="TableHeader"
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "12%",
             }
           }
         >
-          <button
-            className="Button inline"
-            onClick={[Function]}
+          Comments
+          <span
+            className="SortArrow"
           >
-            Comments
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
-        <span
-          className="TableHeader active"
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "12%",
             }
           }
         >
-          <button
-            className="Button inline active"
-            onClick={[Function]}
+          Points
+          <span
+            className="SortArrow"
           >
-            Points
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc active"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
+            <i
+              className="fa fa-sort-desc active"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
         <button
           className="Button inline"
           onClick={[Function]}
@@ -183,110 +163,90 @@ exports[`App has a valid snapshot 1`] = `
       <div
         className="TableHeaderRow"
       >
-        <span
-          className="TableHeader"
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "44%",
             }
           }
         >
-          <button
-            className="Button inline"
-            onClick={[Function]}
+          Title
+          <span
+            className="SortArrow"
           >
-            Title
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
-        <span
-          className="TableHeader"
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "20%",
             }
           }
         >
-          <button
-            className="Button inline"
-            onClick={[Function]}
+          Date
+          <span
+            className="SortArrow"
           >
-            Date
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
-        <span
-          className="TableHeader"
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "12%",
             }
           }
         >
-          <button
-            className="Button inline"
-            onClick={[Function]}
+          Comments
+          <span
+            className="SortArrow"
           >
-            Comments
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
-        <span
-          className="TableHeader active"
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+        <button
+          className="DataHeader Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "12%",
             }
           }
         >
-          <button
-            className="Button inline active"
-            onClick={[Function]}
+          Points
+          <span
+            className="SortArrow"
           >
-            Points
-             
-            <span
-              className="SortArrow"
-            >
-              <i
-                className="fa fa-sort-desc active"
-              />
-              <i
-                className="fa fa-sort-asc"
-              />
-            </span>
-          </button>
-        </span>
+            <i
+              className="fa fa-sort-desc active"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
         <button
           className="Button inline"
           style={
@@ -338,110 +298,90 @@ exports[`ResultTable has a valid snapshot 1`] = `
     <div
       className="TableHeaderRow"
     >
-      <span
-        className="TableHeader"
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "44%",
           }
         }
       >
-        <button
-          className="Button inline"
-          onClick={[Function]}
+        Title
+        <span
+          className="SortArrow"
         >
-          Title
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
-      <span
-        className="TableHeader"
+          <i
+            className="fa fa-sort-desc"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "20%",
           }
         }
       >
-        <button
-          className="Button inline"
-          onClick={[Function]}
+        Date
+        <span
+          className="SortArrow"
         >
-          Date
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
-      <span
-        className="TableHeader"
+          <i
+            className="fa fa-sort-desc"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "12%",
           }
         }
       >
-        <button
-          className="Button inline"
-          onClick={[Function]}
+        Comments
+        <span
+          className="SortArrow"
         >
-          Comments
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
-      <span
-        className="TableHeader active"
+          <i
+            className="fa fa-sort-desc"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "12%",
           }
         }
       >
-        <button
-          className="Button inline active"
-          onClick={[Function]}
+        Points
+        <span
+          className="SortArrow"
         >
-          Points
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc active"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
+          <i
+            className="fa fa-sort-desc active"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
       <button
         className="Button inline"
         onClick={[Function]}
@@ -460,110 +400,90 @@ exports[`ResultTable has a valid snapshot 1`] = `
     <div
       className="TableHeaderRow"
     >
-      <span
-        className="TableHeader"
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "44%",
           }
         }
       >
-        <button
-          className="Button inline"
-          onClick={[Function]}
+        Title
+        <span
+          className="SortArrow"
         >
-          Title
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
-      <span
-        className="TableHeader"
+          <i
+            className="fa fa-sort-desc"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "20%",
           }
         }
       >
-        <button
-          className="Button inline"
-          onClick={[Function]}
+        Date
+        <span
+          className="SortArrow"
         >
-          Date
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
-      <span
-        className="TableHeader"
+          <i
+            className="fa fa-sort-desc"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "12%",
           }
         }
       >
-        <button
-          className="Button inline"
-          onClick={[Function]}
+        Comments
+        <span
+          className="SortArrow"
         >
-          Comments
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
-      <span
-        className="TableHeader active"
+          <i
+            className="fa fa-sort-desc"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
+      <button
+        className="DataHeader Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "12%",
           }
         }
       >
-        <button
-          className="Button inline active"
-          onClick={[Function]}
+        Points
+        <span
+          className="SortArrow"
         >
-          Points
-           
-          <span
-            className="SortArrow"
-          >
-            <i
-              className="fa fa-sort-desc active"
-            />
-            <i
-              className="fa fa-sort-asc"
-            />
-          </span>
-        </button>
-      </span>
+          <i
+            className="fa fa-sort-desc active"
+          />
+          <i
+            className="fa fa-sort-asc"
+          />
+        </span>
+      </button>
       <button
         className="Button inline"
         style={

@@ -1,38 +1,38 @@
 import React from 'react';
 
-import { SortArrow, Button, buttonStyles } from '../generic';
-import { COLUMN_HEADERS, COLUMN_SIZES } from './helpers';
+import { SortArrow, Button } from '../generic';
+import { COLUMN_SIZES } from './helpers';
+const { lg, md, sm } = COLUMN_SIZES;
 
+//TODO: make headers easier to click
 // row of Headers
-const HeaderRow = ({ onSort, onClear, sortKey, direction }) => 
+const HeaderRow = ({ onClear, ...rest }) => 
   <div className="TableHeaderRow">
 
-    {/* Header for each column */}
-    {Object.entries(COLUMN_HEADERS).map(c => {
-      const [name, size] = c;
-      const active = sortKey === name;
-      return (
-        <Header key={name} onClick={() => onSort(name)} active={active}
-          direction={direction} size={size} name={name} />
-      );
-    })}
+    {/* Data columns */}
+    <DataHeader style={lg} col="Title" {...rest} />
+    <DataHeader style={md} col="Date" {...rest} />
+    <DataHeader style={sm} col="Comments" {...rest} />
+    <DataHeader style={sm} col="Points" {...rest} />
 
     {/* Dismiss column */}
-    <Button style={COLUMN_SIZES.sm} className="Button inline"
-      onClick={onClear}>
-      <i className="fa fa-trash"></i>
-    </Button>
+    <DismissHeader style={sm} onClick={onClear}/>
   </div>
 
 // Header for columns and sorting
-const Header = ({ active, onClick, name, direction, size }) => {
-  return (
-    <span style={size} className={`TableHeader${active? ' active' : ''}`}>
-      <Button onClick={onClick} className={buttonStyles(active)}>
-        {name} <SortArrow show={active} direction={direction} />
-      </Button>
-    </span>
-  );
-}
+const DataHeader = ({ col, direction, sortKey, onSort, ...rest }) =>
+  <Button
+    className={`DataHeader Button inline`}
+    onClick={() => onSort(col)}
+    {...rest}
+  >
+    {col}
+    <SortArrow active={col === sortKey} direction={direction} />
+  </Button>
+
+const DismissHeader = ({ ...rest }) =>
+  <Button className="Button inline" {...rest}>
+    <i className="fa fa-trash"></i>
+  </Button>
 
 export default HeaderRow;

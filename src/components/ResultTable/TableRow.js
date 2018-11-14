@@ -1,40 +1,37 @@
 import React from 'react';
 
-import { Button, DateString } from '../generic';
-import { COLUMN_SIZES, itemBySource, commentsURL } from './helpers';
+import { COLUMN_SIZES, TABLE_CELLS, itemBySource } from './helpers';
+const { TSpan, TLink, TButton, TDate } = TABLE_CELLS;
+const {lg, md, sm} = COLUMN_SIZES;
 
 // Row of fetched results w/ dismiss button
 const TableRow = ({ onDismiss, ...rest }) => {
   
-  // get column size + data
-  const {lg, md, sm} = COLUMN_SIZES;
-  const { URL, TITLE, DATE, ID, COMMENTS,
-    POINTS } = itemBySource({...rest}),
-    COMMENTS_URL = commentsURL({...rest});
+  // get column data
+  const { URL, TITLE, DATE, ID, COMMENTS, COMMENTS_URL,
+    POINTS } = itemBySource({...rest});
 
   return (
     <div key={ID} className="TableRow">
-      <span style={lg}>
-        <a href={URL}>{TITLE}</a>
-      </span>
+      <TLink style={lg} href={URL}>
+        {TITLE}
+      </TLink>
 
-      <span style={md}>
-        <DateString DATE={DATE} />
-      </span>
+      <TDate style={md}>
+        {DATE}
+      </TDate>
 
-      <span style={sm}>
-        <a href={COMMENTS_URL}>{COMMENTS}</a>
-      </span>
+      <TLink style={sm} href={COMMENTS_URL}>
+        {COMMENTS}
+      </TLink>
 
-      <span style={sm}>
-        {POINTS}
-      </span>
+      <TSpan style={sm}>
+        {POINTS} 
+      </TSpan>
 
-      <span style={sm} className="Dismiss">
-        <Button onClick={() => onDismiss(ID)} className="Button inline">
-          Dismiss
-        </Button>
-      </span>
+      <TButton style={sm} onClick={() => onDismiss(ID)}>
+        Dismiss
+      </TButton>
     </div>
   );
 }

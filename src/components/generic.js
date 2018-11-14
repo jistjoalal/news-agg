@@ -40,22 +40,22 @@ const SourceIcon = ({ source }) =>
  */
 
 // direction: true = up
-const SortArrow = ({ show, direction }) => {
-  const isUp = show && direction;
-  const isDown = show && !direction;
+const SortArrow = ({ active, direction }) => {
+  const isUp = active && direction;
+  const isDown = active && !direction;
   return (
     <span className="SortArrow">
-      <Arrow show={isUp} direction={true} />
-      <Arrow show={isDown} direction={false} />
+      <Arrow active={isUp} direction={true} />
+      <Arrow active={isDown} direction={false} />
     </span>
   )
 }
 
-const Arrow = ({ show, direction }) => {
+const Arrow = ({ active, direction }) => {
   const className = classNames('fa', 
     {'fa-sort-desc': direction},
     {'fa-sort-asc': !direction},
-    {'active': show},
+    {'active': active},
   );
   return (
     <i className={className}></i>
@@ -73,15 +73,13 @@ const ButtonWithLoading = withLoading(Button);
  * helpers
  */
 
-const buttonStyles = active =>
-  classNames('Button inline', {'active': active})
-
-const DateString = ({ DATE }) => {
-  return new Date(DATE*1000).toDateString();
-}
+const DateString = ({ children, ...rest }) =>
+  <span {...rest}>
+    {new Date(+children*1000).toDateString()}
+  </span>
 
 // heart of the app!
 const SOURCES = ['HN', 'Reddit'];
 
 export { Button, withLoading, withError, SortArrow, ButtonWithLoading,
-  buttonStyles, SourceIcon, DateString, SOURCES };
+  SourceIcon, DateString, SOURCES };

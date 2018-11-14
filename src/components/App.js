@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 import '../styles/App.scss';
 
-//TODO: refactor search w/ index.js as it sown component like ResultTable
+//TODO: refactor search w/ index.js as its own component like ResultTable
 //TODO: -then factor out helpers
+//TODO: search on input change
+//TODO: fetch on source click if need (after delete all)
 import Search from './Search/SearchInput';
 import SourceSelect from './Search/SourceSelect';
 
