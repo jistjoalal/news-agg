@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import { COLUMNS, withSource, sourceNextPage,
-  unpackResponse } from '../generic';
+import { unpackResponse, sourceNextPage, withSource,
+  COLUMNS } from './helpers';
+
 import Table from './Table';
 import Footer from './Footer';
 
-//TODO: delete all by clicking trash
-//TODO: headers at bottom of table too?
 class ResultTable extends Component {
   constructor(props) {
     super(props);
@@ -31,9 +30,7 @@ class ResultTable extends Component {
     const { lastSource, lastSearchKey, results, isLoading } = this.state;
     const { source, searchKey } = this.props;
     // change of source or searchKey & !already fetching
-    if ((lastSource !== source || searchKey !== lastSearchKey)
-      && !isLoading)
-    {
+    if ((lastSource !== source || searchKey !== lastSearchKey) && !isLoading) {
       // results not yet cached
       if (!this.resultsSaved(results, source, searchKey)) {
         this.fetchStories();
@@ -51,7 +48,7 @@ class ResultTable extends Component {
     const list = isSaved ? isSaved.hits : [];
     return (
       <div className="ResultTable">
-        <Table list={list} onDismiss={this.onDismiss}
+        <Table list={list} onDismiss={this.onDismiss} onClear={this.dismissAll}
           isSortReverse={isSortReverse} error={error} source={source} />
 
         <Footer isLoading={isLoading}
@@ -126,6 +123,16 @@ class ResultTable extends Component {
       isLoading: false
     }
   })}
+
+  dismissAll = () => this.setState(({ results, lastSource, lastSearchKey }) => {
+    return {
+      results: { ...results,
+        [lastSource]: {...results[lastSource],
+          [lastSearchKey]: null
+        }
+      }
+    }
+  })
 
   // remove hit from result list
   onDismiss = id => this.setState(({ results, lastSource, lastSearchKey }) => {

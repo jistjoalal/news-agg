@@ -1,49 +1,46 @@
 import React from 'react';
 import classNames from 'classnames';
 
-//
-/* general UI stuff */
-//
+// generic.js:
+// - components and helpers
 
-// Font Awesome icons for sources
+/**
+ * HOCS
+ */
+
+const withError = Component => ({ error, ...rest }) =>
+  !error ? <Component { ...rest } />
+  : <div className="interactions">
+      <p>Something went wrong.</p>
+    </div>
+
+const withLoading = Component => ({ isLoading, ...rest }) =>
+  !isLoading ? <Component { ...rest } />
+  : <i className="fa fa-spinner fa-spin fa-3x"></i>
+
+/**
+ * Font Awesome
+ */
+
 const ICON_FA = {
   'HN': 'hacker-news',
   'Reddit': 'reddit-alien'
 }
 
-const ICONS = ({ source }) => {
-  const className = ICON_FA[source] ? `fa fa-${ICON_FA[source]}` : '';
-  return className !== '' ?
-    <i className={className}></i>
-  : source
-}
+const ICONS = ({ source }) =>
+  // default to text
+  !ICON_FA[source] ? source
+  : <i className={`fa fa-${ICON_FA[source]}`}></i>
 
 const SourceIcon = ({ source }) => 
   <ICONS source={source} />
 
-const withLoading = Component => ({ isLoading, ...rest }) =>
-isLoading ?
-  <i className="fa fa-spinner fa-spin fa-3x"></i>
-: <Component { ...rest } />
-
-const withError = Component => ({ error, ...rest }) =>
-error ?
-  <div className="interactions">
-    <p>Something went wrong.</p>
-  </div>
-: <Component { ...rest } />
-
-const Button = ({ children, ...rest }) => 
-  <button { ...rest }>
-    {children}
-  </button>
-
-const buttonStyles = active =>
-  classNames('Button inline', {'active': active})
+/**
+ * clickables
+ */
 
 // direction: true = up
 const SortArrow = ({ show, direction }) => {
-
   const isUp = show && direction;
   const isDown = show && !direction;
   return (
@@ -65,127 +62,26 @@ const Arrow = ({ show, direction }) => {
   );
 }
 
+const Button = ({ children, ...rest }) => 
+  <button { ...rest }>
+    {children}
+  </button>
+
+const ButtonWithLoading = withLoading(Button);
+
+/**
+ * helpers
+ */
+
+const buttonStyles = active =>
+  classNames('Button inline', {'active': active})
+
 const DateString = ({ DATE }) => {
   return new Date(DATE*1000).toDateString();
 }
 
-const ButtonWithLoading = withLoading(Button);
-
-export { Button, withLoading, withError, SortArrow,
-  ButtonWithLoading, buttonStyles, SourceIcon };
-
-//
-/* Table UI */
-//
-
-// layout:
-// lg md sm sm sm
-const COLUMN_SIZES = {
-  lg: {width: '44%'},
-  md: {width: '20%'},
-  sm: {width: '12%'}
-}
-const COLUMN_HEADERS = {
-  Title: COLUMN_SIZES.lg,
-  Date: COLUMN_SIZES.md,
-  Comments: COLUMN_SIZES.sm,
-  Points: COLUMN_SIZES.sm,
-}
-
-export { COLUMN_SIZES, COLUMN_HEADERS };
-
-//
-/* API stuff */
-//
-
+// heart of the app!
 const SOURCES = ['HN', 'Reddit'];
 
-// returns search API url from HOF that takes API args
-const withSource = source => {
-  switch (source) {
-    case 'HN': return HN_URL;
-    case 'Reddit': return REDDIT_URL;
-    default: return HN_URL;
-  }
-}
-const HN_URL = (searchTerm, page) =>
-  `https://hn.algolia.com/api/v1/search?query=${searchTerm}`
-  + `&page=${page}&hitsPerPage=25`;
-const REDDIT_URL = (searchTerm, after) =>
-  `https://www.reddit.com/search.json?q=${searchTerm}&sort=top&count=25`
-  + `&after=${after}`;
-
-// returns an API specific comments url
-const commentsURL = ({ item, source }) => {
-  switch (source) {
-    default: return `https://news.ycombinator.com/item?id=${item.objectID}`
-    case 'Reddit':
-      const base = 'https://www.reddit.com/';
-      return `${base}${item.subreddit_name_prefixed}/comments/${item.id}`;
-  }
-}
-
-// returns a result object of data columns:
-// {
-//   GENERIC_COLUMN_NAME: specific_api_column_name,
-//   ...
-// }
-// -used to output results in table
-const itemBySource = ({ source, item }) => {
-  let result = {};
-  Object.entries(COLUMNS[source]).forEach(c => {
-    result[c[0]] = item[c[1]];
-  });
-  return result;
-}
-
-// source specific API response columns
-const COLUMNS = {
-  HN: {
-    TITLE: 'title',
-    DATE: 'created_at_i',
-    COMMENTS: 'num_comments',
-    POINTS: 'points',
-    URL: 'url',
-    ID: 'objectID',
-  },
-  Reddit: {
-    TITLE: 'title',
-    DATE: 'created',
-    COMMENTS: 'num_comments',
-    POINTS: 'score',
-    URL: 'url',
-    ID: 'id',
-  }
-};
-
-// returns the next page of stories from source
-// - results[source][searchKey].page can contain different
-//   data for each source
-const sourceNextPage = (source, page) => {
-  switch(source) {
-    case 'HN': return page + 1;
-    case 'Reddit': return page;
-    default: return page;
-  }
-}
-
-const unpackResponse = (source, response) => {
-  switch(source) {
-    case 'HN': return response;
-    case 'Reddit':
-      // -data: one level deeper than HN
-      const { children, after } = response.data;
-      return {
-        // -hits: one level deeper than HN hits
-        hits: children.map(c => c.data),
-        // -page: uses ID pointer to next post instead of page,
-        //   works the same though, just plug into url
-        page: after
-      }
-    default: return {};
-  }
-}
-
-export { withSource, itemBySource, DateString, commentsURL, COLUMNS,
-  SOURCES, sourceNextPage, unpackResponse };
+export { Button, withLoading, withError, SortArrow, ButtonWithLoading,
+  buttonStyles, SourceIcon, DateString, SOURCES };

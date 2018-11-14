@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button, COLUMN_SIZES, DateString, commentsURL,
-  itemBySource } from '../generic';
+import { Button, DateString } from '../generic';
+import { COLUMN_SIZES, itemBySource, commentsURL } from './helpers';
 
 // Row of fetched results w/ dismiss button
 const TableRow = ({ onDismiss, ...rest }) => {

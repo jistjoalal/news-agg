@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { sortBy } from 'lodash';
 
-import { withError, COLUMNS } from '../generic';
+import { withError } from '../generic';
+import { COLUMNS } from './helpers';
+
 import TableHeaderRow from './TableHeaderRow';
 import TableRow from './TableRow';
 
@@ -28,21 +30,32 @@ class Table extends Component {
     }
   }
 
-  render() {
+  tableRows = () => {
     const { list, onDismiss, source } = this.props;
     const { sortKey, isSortReverse } = this.state;
     // sort list
     const sortedList = sortBy(list, COLUMNS[source][sortKey.toUpperCase()])
     // toggle reverse
     const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
+    
+    // show line for empty list
+    return list.length === 0 ? '----------------'
+    : toggleSortedList.map((item, i) =>
+        <TableRow key={i} source={source}
+          item={item} onDismiss={onDismiss}/>
+    )
+  }
+
+  render() {
+    const { onClear } = this.props;
+    const { sortKey, isSortReverse } = this.state;
     return (
       <div className="Table">
+        <TableHeaderRow onSort={this.onSort} onClear={onClear}
+          sortKey={sortKey} direction={isSortReverse} />
+        <this.tableRows />
         <TableHeaderRow onSort={this.onSort}
           sortKey={sortKey} direction={isSortReverse} />
-        {toggleSortedList.map((item, i) =>
-          <TableRow key={i} source={source}
-            item={item} onDismiss={onDismiss}/>
-        )}
       </div>
     );
   }

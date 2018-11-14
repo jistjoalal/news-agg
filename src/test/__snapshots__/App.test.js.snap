@@ -165,8 +165,9 @@ exports[`App has a valid snapshot 1`] = `
             </span>
           </button>
         </span>
-        <span
-          className="TableHeader"
+        <button
+          className="Button inline"
+          onClick={[Function]}
           style={
             Object {
               "width": "12%",
@@ -176,7 +177,128 @@ exports[`App has a valid snapshot 1`] = `
           <i
             className="fa fa-trash"
           />
+        </button>
+      </div>
+      ----------------
+      <div
+        className="TableHeaderRow"
+      >
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          <button
+            className="Button inline"
+            onClick={[Function]}
+          >
+            Title
+             
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
+          </button>
         </span>
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          <button
+            className="Button inline"
+            onClick={[Function]}
+          >
+            Date
+             
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
+          </button>
+        </span>
+        <span
+          className="TableHeader"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          <button
+            className="Button inline"
+            onClick={[Function]}
+          >
+            Comments
+             
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
+          </button>
+        </span>
+        <span
+          className="TableHeader active"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          <button
+            className="Button inline active"
+            onClick={[Function]}
+          >
+            Points
+             
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc active"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
+          </button>
+        </span>
+        <button
+          className="Button inline"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          <i
+            className="fa fa-trash"
+          />
+        </button>
       </div>
     </div>
     <div
@@ -320,8 +442,9 @@ exports[`ResultTable has a valid snapshot 1`] = `
           </span>
         </button>
       </span>
-      <span
-        className="TableHeader"
+      <button
+        className="Button inline"
+        onClick={[Function]}
         style={
           Object {
             "width": "12%",
@@ -331,7 +454,128 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <i
           className="fa fa-trash"
         />
+      </button>
+    </div>
+    ----------------
+    <div
+      className="TableHeaderRow"
+    >
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Title
+           
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
       </span>
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Date
+           
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+      </span>
+      <span
+        className="TableHeader"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        <button
+          className="Button inline"
+          onClick={[Function]}
+        >
+          Comments
+           
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+      </span>
+      <span
+        className="TableHeader active"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        <button
+          className="Button inline active"
+          onClick={[Function]}
+        >
+          Points
+           
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc active"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
+        </button>
+      </span>
+      <button
+        className="Button inline"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        <i
+          className="fa fa-trash"
+        />
+      </button>
     </div>
   </div>
   <div
