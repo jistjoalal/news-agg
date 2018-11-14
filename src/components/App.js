@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 import '../styles/App.scss';
 
-//TODO: refactor search w/ index.js as its own component like ResultTable
-//TODO: -then factor out helpers
-import Search from './Search/SearchInput';
+import Search from './Search';
 import SourceSelect from './Search/SourceSelect';
 
 import ResultTable from './ResultTable';

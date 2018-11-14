@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SOURCES, SourceIcon } from '../generic';
+import { SOURCES, SourceIcon } from './helpers';
 
 const SourceSelect = ({ source, onChange }) => {
   return (
@@ -21,6 +21,6 @@ const SourceSelect = ({ source, onChange }) => {
       )}
     </div>
   );
-} 
+}
 
 export default SourceSelect;
