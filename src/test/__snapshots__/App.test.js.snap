@@ -6,48 +6,52 @@ exports[`App has a valid snapshot 1`] = `
   id="top"
 >
   <div
-    className="SourceSelect"
+    className="Menu"
   >
-    <label
-      className="SourceSelectRadio active"
+    <div
+      className="SourceSelect"
+    >
+      <label
+        className="SourceSelectRadio active"
+        onMouseDown={[Function]}
+      >
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="radio"
+          value="HN"
+        />
+        <i
+          className="fa fa-hacker-news"
+        />
+      </label>
+      <label
+        className="SourceSelectRadio"
+        onMouseDown={[Function]}
+      >
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="radio"
+          value="Reddit"
+        />
+        <i
+          className="fa fa-reddit-alien"
+        />
+      </label>
+    </div>
+    <form
+      className="Search"
+      onSubmit={[Function]}
     >
       <input
-        checked={true}
         onChange={[Function]}
-        type="radio"
-        value="HN"
+        onFocus={[Function]}
+        type="text"
+        value="react"
       />
-      HN
-    </label>
-    <label
-      className="SourceSelectRadio"
-    >
-      <input
-        checked={false}
-        onChange={[Function]}
-        type="radio"
-        value="Reddit"
-      />
-      Reddit
-    </label>
+    </form>
   </div>
-  <form
-    className="Search"
-    onSubmit={[Function]}
-  >
-    <input
-      onChange={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value="react"
-    />
-    <button
-      className="Button clickable"
-      type="submit"
-    >
-      Search
-    </button>
-  </form>
   <div
     className="ResultTable"
   >
@@ -71,6 +75,16 @@ exports[`App has a valid snapshot 1`] = `
           >
             Title
              
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
           </button>
         </span>
         <span
@@ -87,6 +101,16 @@ exports[`App has a valid snapshot 1`] = `
           >
             Date
              
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
           </button>
         </span>
         <span
@@ -103,6 +127,16 @@ exports[`App has a valid snapshot 1`] = `
           >
             Comments
              
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
           </button>
         </span>
         <span
@@ -119,9 +153,16 @@ exports[`App has a valid snapshot 1`] = `
           >
             Points
              
-            <i
-              className="fa fa-arrow-down"
-            />
+            <span
+              className="SortArrow"
+            >
+              <i
+                className="fa fa-sort-desc active"
+              />
+              <i
+                className="fa fa-sort-asc"
+              />
+            </span>
           </button>
         </span>
         <span
@@ -189,6 +230,16 @@ exports[`ResultTable has a valid snapshot 1`] = `
         >
           Title
            
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
         </button>
       </span>
       <span
@@ -205,6 +256,16 @@ exports[`ResultTable has a valid snapshot 1`] = `
         >
           Date
            
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
         </button>
       </span>
       <span
@@ -221,6 +282,16 @@ exports[`ResultTable has a valid snapshot 1`] = `
         >
           Comments
            
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
         </button>
       </span>
       <span
@@ -237,9 +308,16 @@ exports[`ResultTable has a valid snapshot 1`] = `
         >
           Points
            
-          <i
-            className="fa fa-arrow-down"
-          />
+          <span
+            className="SortArrow"
+          >
+            <i
+              className="fa fa-sort-desc active"
+            />
+            <i
+              className="fa fa-sort-asc"
+            />
+          </span>
         </button>
       </span>
       <span
@@ -283,11 +361,5 @@ exports[`Search has a valid snapshot 1`] = `
   <input
     type="text"
   />
-  <button
-    className="Button clickable"
-    type="submit"
-  >
-    Search
-  </button>
 </form>
 `;

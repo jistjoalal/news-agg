@@ -5,6 +5,22 @@ import classNames from 'classnames';
 /* general UI stuff */
 //
 
+// Font Awesome icons for sources
+const ICON_FA = {
+  'HN': 'hacker-news',
+  'Reddit': 'reddit-alien'
+}
+
+const ICONS = ({ source }) => {
+  const className = ICON_FA[source] ? `fa fa-${ICON_FA[source]}` : '';
+  return className !== '' ?
+    <i className={className}></i>
+  : source
+}
+
+const SourceIcon = ({ source }) => 
+  <ICONS source={source} />
+
 const withLoading = Component => ({ isLoading, ...rest }) =>
 isLoading ?
   <i className="fa fa-spinner fa-spin fa-3x"></i>
@@ -56,7 +72,7 @@ const DateString = ({ DATE }) => {
 const ButtonWithLoading = withLoading(Button);
 
 export { Button, withLoading, withError, SortArrow,
-  ButtonWithLoading, buttonStyles };
+  ButtonWithLoading, buttonStyles, SourceIcon };
 
 //
 /* Table UI */

@@ -9,9 +9,6 @@ const Search = ({ value, onChange, onSubmit, onFocus }) =>
       onChange={onChange}
       onFocus={onFocus}
     />
-    <button className="Button clickable" type="submit">
-      Search
-    </button>
   </form>
 
 export default Search;

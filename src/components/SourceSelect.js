@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SOURCES } from './generic';
+import { SOURCES, SourceIcon } from './generic';
 
 const SourceSelect = ({ source, onChange }) => {
   return (
@@ -16,7 +16,7 @@ const SourceSelect = ({ source, onChange }) => {
           <input type="radio" value={s}
             checked={source === s} onChange={onChange}
           />
-            {s}
+            <SourceIcon source={s} />
         </label>
       )}
     </div>

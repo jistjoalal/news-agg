@@ -6,7 +6,7 @@ import Search from './Search';
 import SourceSelect from './SourceSelect';
 import ResultTable from './ResultTable';
 
-//TODO: graphql?
+//TODO: comments url broken?
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,10 +21,12 @@ class App extends Component {
     const { searchTerm, searchKey, source }  = this.state;
     return (
       <div className="App" id="top">
-        <SourceSelect source={source} onChange={this.onSourceChange} />
+        <div className="Menu">
+          <SourceSelect source={source} onChange={this.onSourceChange} />
 
-        <Search value={searchTerm} onChange={this.onSearchChange}
-          onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
+          <Search value={searchTerm} onChange={this.onSearchChange}
+            onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
+        </div>
 
         <ResultTable source={source} searchKey={searchKey} />
       </div>

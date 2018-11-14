@@ -1,56 +1,79 @@
 //TODO: remove redundants
 //TODO: media queries
-//TODO: add reddit icon
-//TODO: get rid of index.scss
+//TODO: consolidate general styles
 
-$green: #009000;
+$green: #00A000;
 
 $gray: #939291;
 $gray-border: #e3e3e3;
 $gray-background: #333231;
+$gray-text: darken($gray, 25%);
 
 $term-black: #151515;
 /**
- *  App component styles
+ *  App styles
  */
 .App {
-  margin: 20px;
   text-align: center;
+  padding: 20px;
 
-  .Search {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+  a {
+    color: black;
+    text-decoration: none;
 
-    input[type="text"] {
-      color: $green;
-
-      &:focus {
-        background: $term-black;
-      }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $gray-text;
     }
   }
-  
-  .SourceSelect {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    .SourceSelectRadio {
-      margin: 10px;
-      font-size: 2em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 0 0 10px black;
-      color: $gray;
-      cursor: pointer;
-      input[type="radio"] {
-        display: none;
-      }
 
-      &.active {
-        color: $green;
+  .Menu {
+
+    .Search {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+  
+      input[type="text"] {
+        color: $gray-border;
+        padding: 10px;
+        border-radius: 5px;
+        outline: none;
+        margin-right: 10px;
+        border: 1px solid $gray-border;
+        background: transparent;
+  
+        &:focus {
+          background: $term-black;
+          color: $green;
+        }
+      }
+    }
+    
+    .SourceSelect {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 13px;
+    
+      .SourceSelectRadio {
+        margin: 10px;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 0 0 10px black;
+        color: $gray;
+        cursor: pointer;
+        input[type="radio"] {
+          display: none;
+        }
+  
+        &.active {
+          color: $green;
+        }
       }
     }
   }
@@ -67,7 +90,7 @@ $term-black: #151515;
         margin: 10px 0;
         padding: 10px;
         background: $gray;
-        color: $gray-background;
+        color: $gray-text;
         border: 1px solid $gray-border;
       }
 
