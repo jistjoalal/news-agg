@@ -12,11 +12,11 @@ exports[`App has a valid snapshot 1`] = `
       className="SourceSelect"
     >
       <label
-        className="SourceSelectRadio active"
+        className="SourceSelectRadio"
         onMouseDown={[Function]}
       >
         <input
-          checked={true}
+          checked={false}
           onChange={[Function]}
           type="radio"
           value="HN"
@@ -26,11 +26,11 @@ exports[`App has a valid snapshot 1`] = `
         />
       </label>
       <label
-        className="SourceSelectRadio"
+        className="SourceSelectRadio active"
         onMouseDown={[Function]}
       >
         <input
-          checked={false}
+          checked={true}
           onChange={[Function]}
           type="radio"
           value="Reddit"
@@ -47,7 +47,7 @@ exports[`App has a valid snapshot 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="text"
-        value="react"
+        value=""
       />
     </form>
   </div>
@@ -158,7 +158,1331 @@ exports[`App has a valid snapshot 1`] = `
           />
         </button>
       </div>
-      ----------------
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=0"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=1"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=2"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=3"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=4"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=5"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=6"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=7"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=8"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=9"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=10"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=11"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=12"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=13"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=14"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=15"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=16"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=17"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=18"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=19"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=20"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=21"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=22"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=23"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
+      <div
+        className="TableRow"
+      >
+        <a
+          href="#"
+          style={
+            Object {
+              "width": "44%",
+            }
+          }
+        >
+          ...
+        </a>
+        <span
+          style={
+            Object {
+              "width": "20%",
+            }
+          }
+        >
+          Thu Jan 01 1970
+        </span>
+        <a
+          href="https://news.ycombinator.com/item?id=24"
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          42
+        </a>
+        <span
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          1337
+        </span>
+        <button
+          className="Dismiss Button inline"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": "12%",
+            }
+          }
+        >
+          Dismiss
+        </button>
+      </div>
       <div
         className="TableHeaderRow"
       >
@@ -395,7 +1719,1331 @@ exports[`ResultTable has a valid snapshot 1`] = `
         />
       </button>
     </div>
-    ----------------
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=0"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=1"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=2"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=3"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=4"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=5"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=6"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=7"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=8"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=9"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=10"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=11"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=12"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=13"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=14"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=15"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=16"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=17"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=18"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=19"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=20"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=21"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=22"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=23"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
+    <div
+      className="TableRow"
+    >
+      <a
+        href="#"
+        style={
+          Object {
+            "width": "44%",
+          }
+        }
+      >
+        ...
+      </a>
+      <span
+        style={
+          Object {
+            "width": "20%",
+          }
+        }
+      >
+        Thu Jan 01 1970
+      </span>
+      <a
+        href="https://news.ycombinator.com/item?id=24"
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        42
+      </a>
+      <span
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        1337
+      </span>
+      <button
+        className="Dismiss Button inline"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "12%",
+          }
+        }
+      >
+        Dismiss
+      </button>
+    </div>
     <div
       className="TableHeaderRow"
     >

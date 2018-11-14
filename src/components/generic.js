@@ -65,4 +65,6 @@ const DateString = ({ children, ...rest }) =>
     {new Date(+children*1000).toDateString()}
   </span>
 
-export { DateString };
+const SOURCES = ['HN', 'Reddit'];
+
+export { DateString, SOURCES };

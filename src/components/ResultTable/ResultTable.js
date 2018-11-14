@@ -22,7 +22,7 @@ class ResultTable extends Component {
 
   // initial fetch
   componentDidMount() {
-    this.setState({ lastSource: 'fetch pls' });
+    this.setState({ lastSearchKey: '' });
   }
 
   // need to fetch results?
@@ -30,7 +30,8 @@ class ResultTable extends Component {
     const { lastSource, lastSearchKey, results, isLoading } = this.state;
     const { source, searchKey } = this.props;
     // change of source or searchKey & !already fetching
-    if ((lastSource !== source || searchKey !== lastSearchKey) && !isLoading) {
+    if ((lastSource !== source || searchKey !== lastSearchKey)
+    && !isLoading) {
       // results not yet cached
       if (!this.resultsSaved(results, source, searchKey)) {
         this.fetchStories();
@@ -86,7 +87,8 @@ class ResultTable extends Component {
     this.setState({ isLoading: true, error: null });
 
     // make request
-    axios(withSource(source)(searchKey, page))
+    const url = withSource(source)(searchKey, page)
+    axios(url)
       .then(res => this.onResponse(res))
       .catch(error => this.setState({ error, isLoading: false }))
   }

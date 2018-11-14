@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { SOURCES, SourceIcon } from './helpers';
+import { SourceIcon } from './helpers';
+import { SOURCES } from '../generic';
 
 const SourceSelect = ({ source, onChange }) => {
   return (

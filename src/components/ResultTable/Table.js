@@ -39,7 +39,7 @@ class Table extends Component {
     const toggleSortedList = isSortReverse ? sortedList.reverse() : sortedList;
     
     // show line for empty list
-    return list.length === 0 ? '----------------'
+    return list.length === 0 ? <PlaceholderTable />
     : toggleSortedList.map((item, i) =>
         <TableRow key={i} source={source}
           item={item} onDismiss={onDismiss}/>
@@ -61,5 +61,20 @@ class Table extends Component {
   }
 }
 
-const ResultTable = withError(Table);
-export default ResultTable;
+// for an empty table
+const PlaceholderTable = () => {
+  return [...Array(25).keys()].map(i =>
+    <TableRow key={i} source={'HN'} onDismiss={() => true}
+      item={{
+        title: '...',
+        created_at_i: 60*(new Date().getTimezoneOffset()),
+        num_comments: 42,
+        points: 1337,
+        objectID: i,
+        url: "#"
+      }}
+    />
+  );
+}
+
+export default withError(Table);

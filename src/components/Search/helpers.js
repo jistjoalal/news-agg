@@ -1,7 +1,5 @@
 import React from 'react';
 
-const SOURCES = ['HN', 'Reddit'];
-
 const ICON_FA = {
   'HN': 'hacker-news',
   'Reddit': 'reddit-alien'
@@ -16,4 +14,4 @@ const SourceIcon = ({ source }) =>
   <ICONS source={source} />
 
 
-export { SourceIcon, SOURCES };
+export { SourceIcon };
