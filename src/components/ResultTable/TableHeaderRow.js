@@ -4,7 +4,6 @@ import { SortArrow, Button } from '../generic';
 import { COLUMN_SIZES } from './helpers';
 const { lg, md, sm } = COLUMN_SIZES;
 
-//TODO: make headers easier to click
 // row of Headers
 const HeaderRow = ({ onClear, ...rest }) => 
   <div className="TableHeaderRow">

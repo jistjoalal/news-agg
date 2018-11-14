@@ -76,17 +76,19 @@ const itemBySource = ({ source, item }) => {
 // returns search API url from HOF that takes API args
 const withSource = source => {
   switch (source) {
-    case 'HN': return HN_URL;
-    case 'Reddit': return REDDIT_URL;
-    default: return HN_URL;
+    case 'HN': return HN_API;
+    case 'Reddit': return REDDIT_API;
+    default: return HN_API;
   }
 }
-const HN_URL = (searchTerm, page) =>
-  `https://hn.algolia.com/api/v1/search?query=${searchTerm}`
-  + `&page=${page}&hitsPerPage=25`;
-const REDDIT_URL = (searchTerm, after) =>
-  `https://www.reddit.com/search.json?q=${searchTerm}&sort=top&count=25`
-  + `&after=${after}`;
+const HN_API = (searchKey, page) =>
+  `https://hn.algolia.com/api/v1/search?query=${searchKey}`
+  + `&page=${page}`
+  + `&hitsPerPage=25&tags=story`;
+const REDDIT_API = (searchKey, after) =>
+  `https://www.reddit.com/search.json?q=${searchKey}`
+  + `&after=${after}`
+  + `&sort=top&count=25`;
 
 
 // returns the next page of stories from source

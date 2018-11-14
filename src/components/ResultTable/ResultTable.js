@@ -7,7 +7,6 @@ import { unpackResponse, sourceNextPage, withSource,
 import Table from './Table';
 import Footer from './Footer';
 
-//TODO: fetchMore sort by points, isr=false 
 class ResultTable extends Component {
   constructor(props) {
     super(props);

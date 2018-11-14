@@ -4,8 +4,6 @@ import '../styles/App.scss';
 
 //TODO: refactor search w/ index.js as its own component like ResultTable
 //TODO: -then factor out helpers
-//TODO: search on input change
-//TODO: fetch on source click if need (after delete all)
 import Search from './Search/SearchInput';
 import SourceSelect from './Search/SourceSelect';
 
@@ -16,19 +14,18 @@ class App extends Component {
     super(props);
     this.state = {
       searchKey: 'react',
-      searchTerm: 'react',
       source: 'HN',
     };
   }
 
   render() {
-    const { searchTerm, searchKey, source }  = this.state;
+    const { searchKey, source }  = this.state;
     return (
       <div className="App" id="top">
         <div className="Search">
           <SourceSelect source={source} onChange={this.onSourceChange} />
 
-          <Search value={searchTerm} onChange={this.onSearchChange}
+          <Search value={searchKey} onChange={this.onSearchChange}
             onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
         </div>
 
@@ -43,21 +40,16 @@ class App extends Component {
   }
   
   // control search input
-  onSearchChange = event => {
-    this.setState({ searchTerm: event.target.value });
-  }
-
-  // submit search input
-  onSearchSubmit = event => {
-    event.preventDefault();
-    this.setState(prevState => {
-      return { searchKey: prevState.searchTerm }
-    });
+  onSearchChange = ({ target }) => {
+    console.log(target.value)
+    if (target.value !== '') {
+      this.setState({ searchKey: target.value });
+    }
   }
 
   // clear search input on focus
   onFocus = () => {
-    this.setState({searchTerm: ''});
+    this.setState({searchKey: ''});
   }
 }
 
