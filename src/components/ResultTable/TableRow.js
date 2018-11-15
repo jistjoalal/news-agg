@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { COLUMN_SIZES, TABLE_CELLS, itemBySource } from './helpers';
-const { TSpan, TLink, TButton, TDate } = TABLE_CELLS;
+const { TSpan, TLink, TButton, TDate, TTitle } = TABLE_CELLS;
 const {lg, md, sm} = COLUMN_SIZES;
 
 // Row of fetched results w/ dismiss button
@@ -13,11 +13,11 @@ const TableRow = ({ onDismiss, ...rest }) => {
 
   return (
     <div key={ID} className="TableRow">
-      <TLink style={lg} href={URL}>
+      <TTitle style={lg} href={URL}>
         {TITLE}
-      </TLink>
+      </TTitle>
 
-      <TDate style={md}>
+      <TDate style={md} className="TableMobileExclude">
         {DATE}
       </TDate>
 

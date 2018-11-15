@@ -1,32 +1,44 @@
 
 //TODO: media queries
 
-$green: #00A000;
+/**
+ *  Colors
+ */
 
 $gray: #939291;
 $gray-border: #e3e3e3;
 $gray-background: #333231;
 $gray-text: darken($gray, 25%);
 
+$green: #00A000;
+
 $term-black: #151515;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $gray-text;
+  }
+}
+
 /**
  *  App styles
  */
 .App {
   text-align: center;
   padding: 20px;
-
-  a {
-    color: black;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-    &:visited {
-      color: $gray-text;
-    }
-  }
+  width: 85%;
 
   .Search {
 
@@ -92,13 +104,14 @@ $term-black: #151515;
         background: $gray;
         color: $gray-text;
         border: 1px solid $gray-border;
+        
+        span, a, button {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
 
       .TableHeaderRow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $term-black;
 
         .DataHeader {
           font-size: 1.33em;
@@ -107,11 +120,6 @@ $term-black: #151515;
       }
 
       .TableRow {
-        
-        span, a {
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
 
         .Dismiss {
           color: $gray-text;
@@ -130,13 +138,13 @@ $term-black: #151515;
  *  generic component styles
  */
 
- .SortArrow {
+.SortArrow {
+  display: inline;
 
   i[class*="fa-sort-"] {
     margin-top: 1px;
     color: $gray-background;
     position: absolute;
-    margin-left: 0.33em;
 
     &.active {
       color: $green;
@@ -174,4 +182,36 @@ $term-black: #151515;
 
 .fa-spinner {
   color: $green;
+}
+
+@media (max-width: 1000px) {
+
+  .App {
+    // padding: 10px;
+    width: calc(100% - 40px);
+  }
+  .SortArrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .TableHeaderRow {
+    display: none !important;
+  }
+
+  .TableRow {
+    .Title {
+      width: 100% !important;
+    }
+    :not(.Title) {
+      display: none;
+    }
+  }
+
+  .SourceSelectRadio {
+    transform: scale(2);
+    padding: 0 10px 10px 10px;
+  }
 }

@@ -43,7 +43,7 @@ const TABLE_CELLS = {
     </span>,
 
   TLink: ({ children, ...rest }) =>
-    <a {...rest}>
+    <a {...rest} target="">
       {children}
     </a>,
 
@@ -56,6 +56,11 @@ const TABLE_CELLS = {
     <span {...rest}>
       {new Date(+children*1000).toDateString()}
     </span>,
+
+  TTitle: ({ children, ...rest }) =>
+    <a {...rest} className="Title" target="blank">
+      {children}
+    </a>
 };
 
 // returns a result object of data columns:

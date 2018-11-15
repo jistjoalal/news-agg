@@ -71,7 +71,7 @@ const PlaceholderTable = () => {
         num_comments: 42,
         points: 1337,
         objectID: i,
-        url: "#"
+        url: ""
       }}
     />
   );

@@ -12,11 +12,11 @@ exports[`App has a valid snapshot 1`] = `
       className="SourceSelect"
     >
       <label
-        className="SourceSelectRadio"
+        className="SourceSelectRadio active"
         onMouseDown={[Function]}
       >
         <input
-          checked={false}
+          checked={true}
           onChange={[Function]}
           type="radio"
           value="HN"
@@ -26,11 +26,11 @@ exports[`App has a valid snapshot 1`] = `
         />
       </label>
       <label
-        className="SourceSelectRadio active"
+        className="SourceSelectRadio"
         onMouseDown={[Function]}
       >
         <input
-          checked={true}
+          checked={false}
           onChange={[Function]}
           type="radio"
           value="Reddit"

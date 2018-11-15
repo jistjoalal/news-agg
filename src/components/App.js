@@ -4,15 +4,15 @@ import '../styles/App.scss';
 
 import Search from './Search';
 import SourceSelect from './Search/SourceSelect';
-
 import ResultTable from './ResultTable';
 
+//TODO: change fetch order (goes by points now)
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       searchKey: '',
-      source: 'Reddit',
+      source: 'HN',
     };
   }
 

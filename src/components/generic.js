@@ -29,7 +29,7 @@ const SortArrow = ({ active, direction }) => {
   const isUp = active && direction;
   const isDown = active && !direction;
   return (
-    <span className="SortArrow">
+    <span className="SortArrow">&nbsp;
       <Arrow active={isUp} direction={true} />
       <Arrow active={isDown} direction={false} />
     </span>
