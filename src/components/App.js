@@ -7,6 +7,8 @@ import SourceSelect from './Search/SourceSelect';
 import ResultTable from './ResultTable';
 
 //TODO: fetch by active column (goes by points now (default for both APIs))
+//TODO: firefox tracking protection blocks reddit
+//  - solved by wrapping APIs w/ graphql?
 class App extends Component {
   constructor(props) {
     super(props);

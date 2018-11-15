@@ -100,8 +100,8 @@ a {
       .TableRow, .TableHeaderRow {
         display: flex;
         justify-content: center;
+        align-items: center;
         line-height: 2.8em;
-        white-space: nowrap;
         margin: 15px 0;
         padding: 5px;
         background: $gray;
@@ -111,6 +111,7 @@ a {
         span, a, button {
           overflow: hidden;
           text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
 
@@ -122,7 +123,6 @@ a {
         }
       }
 
-      // TODO: vertically center loding icon w/o breaking ellipsis overflow
       .TableRow {
         
         .Dismiss {
@@ -188,6 +188,7 @@ a {
 // loading icon
 .fa-spin {
   color: $green;
+  vertical-align: center;
 }
 
 /**

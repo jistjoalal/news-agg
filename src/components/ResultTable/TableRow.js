@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { LoadingIcon } from '../generic';
 import { COLUMN_SIZES, TABLE_CELLS, itemBySource } from './helpers';
 const { TSpan, TLink, TButton, TDate, TTitle } = TABLE_CELLS;
 const {lg, md, sm} = COLUMN_SIZES;
@@ -17,7 +18,7 @@ const TableRow = ({ onDismiss, ...rest }) => {
         {TITLE}
       </TTitle>
 
-      <TDate style={md} className="TableMobileExclude">
+      <TDate style={md}>
         {DATE}
       </TDate>
 
@@ -36,4 +37,10 @@ const TableRow = ({ onDismiss, ...rest }) => {
   );
 }
 
+const TableRowPlaceholder = i =>
+  <div key={i} className="TableRow">
+    <LoadingIcon isLoading={true} />
+  </div>
+
+export { TableRow, TableRowPlaceholder };
 export default TableRow;
