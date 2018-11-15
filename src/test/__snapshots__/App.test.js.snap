@@ -166,1477 +166,177 @@ exports[`App has a valid snapshot 1`] = `
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=0"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=1"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=2"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=3"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=4"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=5"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=6"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=7"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=8"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=9"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=10"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=11"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=12"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=13"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=14"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=15"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=16"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=17"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=18"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=19"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=20"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=21"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=22"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=23"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableRow"
       >
-        <a
-          className="Title"
-          href=""
-          style={
-            Object {
-              "width": "44%",
-            }
-          }
-          target="blank"
-        >
-          <i
-            className="fa fa-2x fa-circle-o-notch fa-spin"
-          />
-        </a>
-        <span
-          className="TableMobileExclude"
-          style={
-            Object {
-              "width": "20%",
-            }
-          }
-        >
-          Thu Jan 01 1970
-        </span>
-        <a
-          href="https://news.ycombinator.com/item?id=24"
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-          target=""
-        >
-          42
-        </a>
-        <span
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          1337
-        </span>
-        <button
-          className="Dismiss Button inline"
-          onClick={[Function]}
-          style={
-            Object {
-              "width": "12%",
-            }
-          }
-        >
-          Dismiss
-        </button>
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </div>
       <div
         className="TableHeaderRow"
@@ -1885,1477 +585,177 @@ exports[`ResultTable has a valid snapshot 1`] = `
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=0"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=1"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=2"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=3"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=4"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=5"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=6"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=7"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=8"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=9"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=10"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=11"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=12"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=13"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=14"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=15"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=16"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=17"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=18"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=19"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=20"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=21"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=22"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=23"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableRow"
     >
-      <a
-        className="Title"
-        href=""
-        style={
-          Object {
-            "width": "44%",
-          }
-        }
-        target="blank"
-      >
-        <i
-          className="fa fa-2x fa-circle-o-notch fa-spin"
-        />
-      </a>
-      <span
-        className="TableMobileExclude"
-        style={
-          Object {
-            "width": "20%",
-          }
-        }
-      >
-        Thu Jan 01 1970
-      </span>
-      <a
-        href="https://news.ycombinator.com/item?id=24"
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-        target=""
-      >
-        42
-      </a>
-      <span
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        1337
-      </span>
-      <button
-        className="Dismiss Button inline"
-        onClick={[Function]}
-        style={
-          Object {
-            "width": "12%",
-          }
-        }
-      >
-        Dismiss
-      </button>
+      <i
+        className="fa fa-2x fa-circle-o-notch fa-spin"
+      />
     </div>
     <div
       className="TableHeaderRow"
