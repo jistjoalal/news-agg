@@ -6,7 +6,7 @@ import Search from './Search';
 import SourceSelect from './Search/SourceSelect';
 import ResultTable from './ResultTable';
 
-//TODO: change fetch order (goes by points now)
+//TODO: fetch by active column (goes by points now (default for both APIs))
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +18,9 @@ class App extends Component {
 
   render() {
     const { searchKey, source }  = this.state;
+    
+    // search key defaults to react
+    const s = searchKey === '' ? 'react' : searchKey;
     return (
       <div className="App" id="top">
         <div className="Search">
@@ -27,7 +30,7 @@ class App extends Component {
             onSubmit={this.onSearchSubmit} onFocus={this.onFocus} />
         </div>
 
-        <ResultTable source={source} searchKey={searchKey} />
+        <ResultTable source={source} searchKey={s} />
       </div>
     );
   }

@@ -1,20 +1,22 @@
 
-//TODO: media queries
-
 /**
  *  Colors
  */
 
-$gray: #939291;
-$gray-border: #e3e3e3;
-$gray-background: #333231;
-$gray-text: darken($gray, 25%);
+ $gray: #939291;
+ $gray-border: #e3e3e3;
+ $gray-background: #333231;
+ $gray-text: darken($gray, 25%);
+ 
+ $green: #00A000;
+ 
+ $term-black: #151515;
+ 
+/**
+ *  defaults
+ */
 
-$green: #00A000;
-
-$term-black: #151515;
-
-#root {
+ #root {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,7 +99,8 @@ a {
 
       .TableRow, .TableHeaderRow {
         display: flex;
-        line-height: 24px;
+        justify-content: center;
+        line-height: 2.8em;
         white-space: nowrap;
         margin: 15px 0;
         padding: 5px;
@@ -119,8 +122,9 @@ a {
         }
       }
 
+      // TODO: vertically center loding icon w/o breaking ellipsis overflow
       .TableRow {
-
+        
         .Dismiss {
           color: $gray-text;
         }
@@ -130,6 +134,7 @@ a {
     .Footer {
       display: flex;
       justify-content: space-around;
+      align-items: center;
     }
   }
 }
@@ -180,9 +185,14 @@ a {
   }
 }
 
-.fa-spinner {
+// loading icon
+.fa-spin {
   color: $green;
 }
+
+/**
+ *  media queries
+ */
 
 @media (max-width: 1000px) {
 

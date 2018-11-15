@@ -8,6 +8,7 @@ const SearchInput = ({ value, onChange, onSubmit, onFocus }) =>
       value={value}
       onChange={onChange}
       onFocus={onFocus}
+      placeholder="react"
     />
   </form>
 

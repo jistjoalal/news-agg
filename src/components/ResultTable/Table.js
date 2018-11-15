@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { sortBy } from 'lodash';
 
-import { withError } from '../generic';
+import { withError, LoadingIcon } from '../generic';
 import { COLUMNS } from './helpers';
 
 import TableHeaderRow from './TableHeaderRow';
 import TableRow from './TableRow';
 
+//TODO: make placeholder table more dead (still responds to clicks)
 // table formatted for results from API request
 class Table extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ const PlaceholderTable = () => {
   return [...Array(25).keys()].map(i =>
     <TableRow key={i} source={'HN'} onDismiss={() => true}
       item={{
-        title: '...',
+        title: <LoadingIcon isLoading={true}/>,
         created_at_i: 60*(new Date().getTimezoneOffset()),
         num_comments: 42,
         points: 1337,

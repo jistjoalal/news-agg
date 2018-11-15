@@ -46,6 +46,7 @@ exports[`App has a valid snapshot 1`] = `
       <input
         onChange={[Function]}
         onFocus={[Function]}
+        placeholder="react"
         type="text"
         value=""
       />
@@ -73,6 +74,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc"
             />
@@ -94,6 +96,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc"
             />
@@ -115,6 +118,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc"
             />
@@ -136,6 +140,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc active"
             />
@@ -162,16 +167,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -187,6 +197,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -215,16 +226,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -240,6 +256,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -268,16 +285,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -293,6 +315,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -321,16 +344,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -346,6 +374,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -374,16 +403,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -399,6 +433,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -427,16 +462,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -452,6 +492,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -480,16 +521,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -505,6 +551,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -533,16 +580,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -558,6 +610,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -586,16 +639,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -611,6 +669,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -639,16 +698,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -664,6 +728,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -692,16 +757,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -717,6 +787,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -745,16 +816,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -770,6 +846,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -798,16 +875,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -823,6 +905,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -851,16 +934,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -876,6 +964,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -904,16 +993,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -929,6 +1023,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -957,16 +1052,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -982,6 +1082,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1010,16 +1111,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1035,6 +1141,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1063,16 +1170,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1088,6 +1200,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1116,16 +1229,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1141,6 +1259,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1169,16 +1288,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1194,6 +1318,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1222,16 +1347,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1247,6 +1377,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1275,16 +1406,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1300,6 +1436,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1328,16 +1465,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1353,6 +1495,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1381,16 +1524,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1406,6 +1554,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1434,16 +1583,21 @@ exports[`App has a valid snapshot 1`] = `
         className="TableRow"
       >
         <a
-          href="#"
+          className="Title"
+          href=""
           style={
             Object {
               "width": "44%",
             }
           }
+          target="blank"
         >
-          ...
+          <i
+            className="fa fa-2x fa-circle-o-notch fa-spin"
+          />
         </a>
         <span
+          className="TableMobileExclude"
           style={
             Object {
               "width": "20%",
@@ -1459,6 +1613,7 @@ exports[`App has a valid snapshot 1`] = `
               "width": "12%",
             }
           }
+          target=""
         >
           42
         </a>
@@ -1499,6 +1654,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc"
             />
@@ -1520,6 +1676,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc"
             />
@@ -1541,6 +1698,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc"
             />
@@ -1562,6 +1720,7 @@ exports[`App has a valid snapshot 1`] = `
           <span
             className="SortArrow"
           >
+             
             <i
               className="fa fa-sort-desc active"
             />
@@ -1588,7 +1747,7 @@ exports[`App has a valid snapshot 1`] = `
       className="Footer"
     >
       <i
-        className="fa fa-spinner fa-spin fa-3x"
+        className="fa fa-2x fa-circle-o-notch fa-spin"
       />
       <a
         className="backtotop"
@@ -1634,6 +1793,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc"
           />
@@ -1655,6 +1815,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc"
           />
@@ -1676,6 +1837,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc"
           />
@@ -1697,6 +1859,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc active"
           />
@@ -1723,16 +1886,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -1748,6 +1916,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -1776,16 +1945,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -1801,6 +1975,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -1829,16 +2004,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -1854,6 +2034,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -1882,16 +2063,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -1907,6 +2093,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -1935,16 +2122,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -1960,6 +2152,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -1988,16 +2181,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2013,6 +2211,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2041,16 +2240,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2066,6 +2270,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2094,16 +2299,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2119,6 +2329,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2147,16 +2358,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2172,6 +2388,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2200,16 +2417,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2225,6 +2447,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2253,16 +2476,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2278,6 +2506,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2306,16 +2535,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2331,6 +2565,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2359,16 +2594,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2384,6 +2624,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2412,16 +2653,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2437,6 +2683,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2465,16 +2712,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2490,6 +2742,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2518,16 +2771,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2543,6 +2801,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2571,16 +2830,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2596,6 +2860,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2624,16 +2889,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2649,6 +2919,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2677,16 +2948,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2702,6 +2978,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2730,16 +3007,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2755,6 +3037,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2783,16 +3066,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2808,6 +3096,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2836,16 +3125,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2861,6 +3155,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2889,16 +3184,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2914,6 +3214,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2942,16 +3243,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -2967,6 +3273,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -2995,16 +3302,21 @@ exports[`ResultTable has a valid snapshot 1`] = `
       className="TableRow"
     >
       <a
-        href="#"
+        className="Title"
+        href=""
         style={
           Object {
             "width": "44%",
           }
         }
+        target="blank"
       >
-        ...
+        <i
+          className="fa fa-2x fa-circle-o-notch fa-spin"
+        />
       </a>
       <span
+        className="TableMobileExclude"
         style={
           Object {
             "width": "20%",
@@ -3020,6 +3332,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
             "width": "12%",
           }
         }
+        target=""
       >
         42
       </a>
@@ -3060,6 +3373,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc"
           />
@@ -3081,6 +3395,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc"
           />
@@ -3102,6 +3417,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc"
           />
@@ -3123,6 +3439,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
         <span
           className="SortArrow"
         >
+           
           <i
             className="fa fa-sort-desc active"
           />
@@ -3149,7 +3466,7 @@ exports[`ResultTable has a valid snapshot 1`] = `
     className="Footer"
   >
     <i
-      className="fa fa-spinner fa-spin fa-3x"
+      className="fa fa-2x fa-circle-o-notch fa-spin"
     />
     <a
       className="backtotop"
@@ -3170,6 +3487,7 @@ exports[`SearchInput has a valid snapshot 1`] = `
   className="SearchInput"
 >
   <input
+    placeholder="react"
     type="text"
   />
 </form>

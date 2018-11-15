@@ -16,13 +16,15 @@ const withError = Component => ({ error, ...rest }) =>
 
 const withLoading = Component => ({ isLoading, ...rest }) =>
   !isLoading ? <Component { ...rest } />
-  : <i className="fa fa-spinner fa-spin fa-3x"></i>
+  : <LoadingIcon />
 
 export { withError, withLoading };
 
 /**
- * clickables
+ * mini-components
  */
+
+const LoadingIcon = () => <i className="fa fa-2x fa-circle-o-notch fa-spin"></i>;
 
 // direction: true = up
 const SortArrow = ({ active, direction }) => {
@@ -54,7 +56,7 @@ const Button = ({ children, ...rest }) =>
 
 const ButtonWithLoading = withLoading(Button);
 
-export { Button, SortArrow, ButtonWithLoading };
+export { Button, SortArrow, ButtonWithLoading, LoadingIcon };
 
 /**
  * helpers
